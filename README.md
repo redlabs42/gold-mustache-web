@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gold Mustache - Barbearia Website MVP
 
-## Getting Started
+Website profissional para a Barbearia Gold Mustache, localizada em Itapema, Santa Catarina.
 
-First, run the development server:
+## Tecnologias
+
+- **Frontend**: Next.js 15, React 18, TypeScript
+- **UI Components**: shadcn/ui + Tailwind CSS
+- **Integração Social**: Instagram Basic Display API
+- **Sistema de Agendamento**: Inbarber App (integração via redirect)
+
+## Funcionalidades
+
+- 🏪 Catálogo de serviços e preços
+- 📸 Feed automático do Instagram (@goldmustachebarbearia)
+- 🛍️ Vitrine de produtos (@_goldlab)
+- 📅 Agendamento via Inbarber App
+- 📱 Design responsivo
+- ⚡ Performance otimizada
+- 🎨 Sistema de design consistente
+
+## Desenvolvimento
 
 ```bash
+# Instalar dependências
+npm install
+
+# Executar em modo desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build para produção
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse [http://localhost:3000](http://localhost:3000) para ver o resultado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estrutura do Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── app/                 # App Router (Next.js 13+)
+├── components/          # Componentes React
+│   ├── ui/             # Componentes shadcn/ui
+│   └── custom/         # Componentes específicos
+├── lib/                # Utilitários e configurações
+├── public/             # Assets estáticos
+└── styles/             # Estilos globais
+```
 
-## Learn More
+## Agendamento
 
-To learn more about Next.js, take a look at the following resources:
+O sistema de agendamento utiliza o **Inbarber App** já estabelecido:
+- Link: https://chat.inbarberapp.com/?id=6c060e9d-672d-4f39-bbc4-fac594f4cc28
+- Integração via redirect (preserva fluxo existente)
+- Tracking de conversão implementado
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Instagram Integration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **@goldmustachebarbearia**: Trabalhos e ambiente da barbearia  
+- **@_goldlab**: Produtos para venda
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Feeds atualizados automaticamente com cache inteligente e fallbacks.
