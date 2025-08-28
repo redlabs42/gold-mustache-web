@@ -10,6 +10,7 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { BRAND } from "@/constants/brand";
 
 export function Header() {
@@ -75,6 +76,7 @@ export function Header() {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center space-x-3">
+          <ThemeToggle />
           <Button variant="outline" size="sm" asChild>
             <Link
               href={BRAND.instagram.mainUrl}
@@ -150,6 +152,10 @@ export function Header() {
 
                 {/* Mobile Actions */}
                 <div className="flex flex-col space-y-3 pt-4 border-t">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium">Tema</span>
+                    <ThemeToggle />
+                  </div>
                   <Button variant="outline" asChild className="w-full">
                     <Link
                       href={BRAND.instagram.mainUrl}
