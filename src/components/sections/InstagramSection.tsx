@@ -113,11 +113,13 @@ export function InstagramSection() {
                       <div className="flex items-center justify-center space-x-4">
                         <div className="flex items-center space-x-1">
                           <Heart className="h-5 w-5 fill-white" />
-                          <span className="font-semibold">{post.likes}</span>
+                          {/* <span className="font-semibold">{post?.likes}</span> */}
                         </div>
                         <div className="flex items-center space-x-1">
                           <MessageCircle className="h-5 w-5" />
-                          <span className="font-semibold">{post.comments}</span>
+                          <span className="font-semibold">
+                            {/* {post?.comments} */}
+                          </span>
                         </div>
                       </div>
                       <Button
