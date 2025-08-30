@@ -1,10 +1,10 @@
 "use client";
 
+import { Calendar, Clock, Instagram, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BRAND } from "@/constants/brand";
-import { Calendar, Clock, Instagram, MapPin, Phone } from "lucide-react";
-import Imaga from "next/image";
-import Link from "next/link";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -21,7 +21,7 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <div className="h-8 w-8 flex items-center justify-center">
-                <Imaga
+                <Image
                   src="/logo.png"
                   alt="Gold Mustache Logo"
                   width={32}
