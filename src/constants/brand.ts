@@ -19,16 +19,17 @@ export const BRAND = {
 
   // Contact Information
   contact: {
-    phone: "+55 (47) 99999-9999", // TODO: Add real phone
-    whatsapp: "5547999999999", // TODO: Add real WhatsApp
-    email: "contato@goldmustache.com", // TODO: Add real email
-    address: "Rua das Barbearias, 123 - Centro, Itapema - SC", // TODO: Add real address
+    phone: "47 98904-6178",
+    whatsapp: "+5547989046178",
+    // email: 'contato@goldmustache.com', // TODO: Add real email
+    address:
+      "R. 115, 79 - Centro, Itapema - SC, 88220-000 - Gold Mustache Barbearia",
   },
 
   // Business Hours
   hours: {
-    weekdays: "Segunda a Sexta: 9h às 19h",
-    saturday: "Sábado: 8h às 17h",
+    weekdays: "Segunda a Sexta: 10h às 20h",
+    saturday: "Sábado: 10h às 20h",
     sunday: "Domingo: Fechado",
   },
 
@@ -51,17 +52,24 @@ export const SERVICES = [
     duration: "45 min",
   },
   {
+    id: "corte-degrade",
+    name: "Corte Degradê",
+    description: "Corte clássico com tesoura e navalha",
+    price: "R$ 35,00",
+    duration: "45 min",
+  },
+  {
     id: "corte-barba",
     name: "Corte + Barba",
     description: "Corte completo com acabamento de barba",
-    price: "R$ 50,00",
+    price: "R$ 80,00",
     duration: "60 min",
   },
   {
     id: "barba-completa",
     name: "Barba Completa",
     description: "Aparar, modelar e hidratação",
-    price: "R$ 25,00",
+    price: "R$ 45,00",
     duration: "30 min",
   },
   {
@@ -72,10 +80,10 @@ export const SERVICES = [
     duration: "20 min",
   },
   {
-    id: "sobrancelha",
-    name: "Sobrancelha",
+    id: "sobrancelha-na-navalha",
+    name: "Sobrancelha na Navalha",
     description: "Design e aparar sobrancelhas",
-    price: "R$ 10,00",
+    price: "R$ 20,00",
     duration: "15 min",
   },
 ] as const;

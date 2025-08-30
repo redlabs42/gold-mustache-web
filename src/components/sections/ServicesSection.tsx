@@ -16,10 +16,11 @@ import { BRAND, SERVICES } from "@/constants/brand";
 
 const serviceIcons = {
   "corte-tradicional": Scissors,
+  "corte-degrade": Scissors,
   "corte-barba": Scissors,
   "barba-completa": Razor,
   bigode: Razor,
-  sobrancelha: Scissors,
+  "sobrancelha-na-navalha": Scissors,
 };
 
 export function ServicesSection() {

@@ -1,6 +1,7 @@
 "use client";
 
 import { Calendar, Instagram, Menu } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -28,10 +29,14 @@ export function Header() {
           href="/"
           className="flex items-center space-x-3 text-xl font-bold text-primary hover:text-primary/90 transition-colors"
         >
-          <div className="h-8 w-8 bg-primary rounded-full flex items-center justify-center">
-            <span className="text-primary-foreground text-sm font-bold">
-              GM
-            </span>
+          <div className="h-8 w-8 flex items-center justify-center">
+            <Image
+              src="/logo.png"
+              alt="Gold Mustache Logo"
+              width={32}
+              height={32}
+              className="rounded-full object-cover"
+            />
           </div>
           <span className="hidden sm:inline-block">Gold Mustache</span>
         </Link>
@@ -49,7 +54,7 @@ export function Header() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link
-                href="/servicos"
+                href="#servicos"
                 className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
               >
                 Serviços
@@ -57,18 +62,18 @@ export function Header() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link
-                href="/galeria"
+                href="#trabalhos"
                 className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
               >
-                Galeria
+                Trabalhos
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link
-                href="/contato"
+                href="#contatoLocalizacao"
                 className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
               >
-                Contato
+                Contato & Localização
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -110,12 +115,16 @@ export function Header() {
               <div className="flex flex-col space-y-6 mt-6">
                 {/* Mobile Logo */}
                 <div className="flex items-center space-x-3 text-lg font-bold text-primary">
-                  <div className="h-8 w-8 bg-primary rounded-full flex items-center justify-center">
-                    <span className="text-primary-foreground text-sm font-bold">
-                      GM
-                    </span>
+                  <div className="h-8 w-8 flex items-center justify-center">
+                    <Image
+                      src="/logo.png"
+                      alt="Gold Mustache Logo"
+                      width={32}
+                      height={32}
+                      className="rounded-full object-cover"
+                    />
                   </div>
-                  <span>Gold Mustache</span>
+                  <span className="font-playfair">Gold Mustache</span>
                 </div>
 
                 {/* Mobile Navigation */}
@@ -128,14 +137,14 @@ export function Header() {
                     Início
                   </Link>
                   <Link
-                    href="/servicos"
+                    href="#servicos"
                     className="text-lg font-medium hover:text-primary transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
                     Serviços
                   </Link>
                   <Link
-                    href="/galeria"
+                    href="#galeria"
                     className="text-lg font-medium hover:text-primary transition-colors"
                     onClick={() => setIsOpen(false)}
                   >

@@ -1,6 +1,7 @@
 "use client";
 
 import { Calendar, Clock, MapPin, Star } from "lucide-react";
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BRAND } from "@/constants/brand";
@@ -35,11 +36,22 @@ export function HeroSection() {
 
           {/* Main Heading */}
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-              <span className="text-primary">Gold</span>{" "}
-              <span className="text-foreground">Mustache</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight font-playfair sr-only">
+              <span className="text-primary font-playfair font-extrabold">
+                Gold
+              </span>{" "}
+              <span className="text-foreground font-extrabold">Mustache</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground font-medium">
+            {/* <div className="flex justify-center"> */}
+            <Image
+              src="/logo-gold-mustache-removebg-preview.png"
+              alt="Gold Mustache Logo"
+              width={623}
+              height={400}
+              className="mx-auto rounded-full object-cover h-30"
+            />
+            {/* </div> */}
+            <p className="text-xl md:text-2xl text-muted-foreground font-medium sr-only">
               {BRAND.tagline}
             </p>
           </div>
@@ -58,7 +70,7 @@ export function HeroSection() {
             <Button
               size="lg"
               onClick={handleBookingClick}
-              className="text-lg px-8 py-6 h-auto min-w-[200px]"
+              className="text-lg px-8 py-6 h-auto min-w-[200px] font- font-bold"
             >
               <Calendar className="h-5 w-5 mr-3" />
               Agendar Horário

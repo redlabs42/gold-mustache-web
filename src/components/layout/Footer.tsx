@@ -19,11 +19,17 @@ export function Footer() {
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="h-10 w-10 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-bold">GM</span>
+              <div className="h-8 w-8 flex items-center justify-center">
+                <Imaga
+                  src="/logo.png"
+                  alt="Gold Mustache Logo"
+                  width={32}
+                  height={32}
+                  className="rounded-full object-cover"
+                />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-primary">
+                <h3 className="text-xl font-bold text-primary font-playfair">
                   Gold Mustache
                 </h3>
                 <p className="text-sm text-muted-foreground">{BRAND.tagline}</p>

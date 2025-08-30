@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { ExternalLink, Heart, Instagram, MessageCircle } from "lucide-react";
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -49,7 +49,7 @@ const mockInstagramPosts = [
 
 export function InstagramSection() {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-background" id="trabalhos">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4">

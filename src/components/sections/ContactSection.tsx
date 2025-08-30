@@ -45,7 +45,7 @@ export function ContactSection() {
   };
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-muted/30" id="contatoLocalizacao">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4">
@@ -97,12 +97,12 @@ export function ContactSection() {
               <CardContent className="space-y-3">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Segunda a Sexta</span>
-                  <span className="font-medium">9h às 19h</span>
+                  <span className="font-medium">10h às 20h</span>
                 </div>
                 <Separator />
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Sábado</span>
-                  <span className="font-medium">8h às 17h</span>
+                  <span className="font-medium">10h às 20h</span>
                 </div>
                 <Separator />
                 <div className="flex justify-between">
