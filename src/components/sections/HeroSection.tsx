@@ -1,10 +1,10 @@
 "use client";
 
-import { Calendar, Clock, MapPin, Star } from "lucide-react";
-import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BRAND } from "@/constants/brand";
+import { Calendar, Clock, MapPin, Star } from "lucide-react";
+import Image from "next/image";
 
 export function HeroSection() {
   const handleBookingClick = () => {
@@ -30,7 +30,7 @@ export function HeroSection() {
             </Badge>
             <Badge variant="secondary" className="text-sm px-4 py-2">
               <Star className="h-4 w-4 mr-2 fill-primary text-primary" />
-              +10 anos de experiência
+              +6 anos de experiência
             </Badge>
           </div>
 
@@ -59,7 +59,7 @@ export function HeroSection() {
           {/* Description */}
           <div className="max-w-2xl mx-auto">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Mais de 10 anos oferecendo o melhor em cortes masculinos clássicos
+              Mais de 6 anos oferecendo o melhor em cortes masculinos clássicos
               e modernos. Tradição, qualidade e estilo em cada atendimento na
               melhor barbearia de Itapema.
             </p>
@@ -94,7 +94,7 @@ export function HeroSection() {
               </div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-primary">10+</div>
+              <div className="text-3xl font-bold text-primary">6+</div>
               <div className="text-sm text-muted-foreground">
                 Anos de Experiência
               </div>

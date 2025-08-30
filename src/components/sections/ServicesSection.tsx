@@ -1,6 +1,5 @@
 "use client";
 
-import { Calendar, Clock, ShirtIcon as Razor, Scissors } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -13,6 +12,7 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { BRAND, SERVICES } from "@/constants/brand";
+import { Calendar, Clock, ShirtIcon as Razor, Scissors } from "lucide-react";
 
 const serviceIcons = {
   "corte-tradicional": Scissors,
@@ -114,14 +114,14 @@ export function ServicesSection() {
             <CardContent className="text-center">
               <div className="flex items-center justify-center space-x-4 mb-6">
                 <div className="text-lg text-muted-foreground line-through">
-                  R$ 60,00
+                  R$ 115,00
                 </div>
-                <div className="text-3xl font-bold text-primary">R$ 50,00</div>
-                <Badge variant="destructive">Economize R$ 10</Badge>
+                <div className="text-3xl font-bold text-primary">R$ 100,00</div>
+                <Badge variant="destructive">Economize R$ 15</Badge>
               </div>
               <div className="flex items-center justify-center space-x-2 text-muted-foreground mb-6">
                 <Clock className="h-4 w-4" />
-                <span>Aproximadamente 75 minutos</span>
+                <span>Aproximadamente 60 minutos</span>
               </div>
             </CardContent>
 

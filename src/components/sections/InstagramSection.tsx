@@ -1,49 +1,49 @@
 "use client";
 
-import { ExternalLink, Heart, Instagram, MessageCircle } from "lucide-react";
-import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { BRAND } from "@/constants/brand";
+import { ExternalLink, Heart, Instagram, MessageCircle } from "lucide-react";
+import Image from "next/image";
 
 // Mock data for Instagram posts - será substituído pela integração real
 const mockInstagramPosts = [
   {
     id: "1",
-    image:
-      "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&h=400&fit=crop&crop=face",
-    caption: "Corte clássico finalizado! ✂️ #goldmustache #barbearia",
-    likes: 45,
-    comments: 8,
-    url: "#",
+    image: "/post-1.jpg",
+    caption:
+      "Agenda aberta para transformar seu visual na Barbearia Gold Mustache! 💈✂️ #goldmustache #barbearia",
+    // likes: 45,
+    // comments: 8,
+    url: "https://www.instagram.com/p/C4d6isbPcrv/",
   },
   {
     id: "2",
-    image:
-      "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&h=400&fit=crop&crop=center",
-    caption: "Barba modelada com precisão 🧔 #barba #estilo",
-    likes: 32,
-    comments: 5,
-    url: "#",
+    image: "/post-2.jpg",
+    caption:
+      "✂️ Agende já o seu horário na Barbearia Gold Mustache! 💈 #barba #estilo",
+    // likes: 32,
+    // comments: 5,
+    url: "https://www.instagram.com/p/C3ntXR2P-OR/",
   },
   {
     id: "3",
-    image:
-      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=400&fit=crop&crop=center",
-    caption: "Ambiente aconchegante da nossa barbearia 🪑",
-    likes: 28,
-    comments: 3,
-    url: "#",
+    image: "/post-3.jpg",
+    caption:
+      "Experimente a excelência no cuidado com a Barbearia Gold Mustache. 🪑",
+    // likes: 28,
+    // comments: 3,
+    url: "https://www.instagram.com/p/C29pPW7ORnf/",
   },
   {
     id: "4",
-    image:
-      "https://images.unsplash.com/photo-1622286346003-4d5d394eb89b?w=400&h=400&fit=crop&crop=center",
-    caption: "Produtos de qualidade para cuidados especiais ✨",
-    likes: 38,
-    comments: 7,
-    url: "#",
+    image: "/post-4.jpg",
+    caption:
+      "✨✂️ O tratamento que você merece está aqui na Gold Mustache. Agende seu horário e descubra o cuidado premium que fará você se sentir no topo da elegância. Sua barba, seu estilo, nossa expertise. 💈👑",
+    // likes: 38,
+    // comments: 7,
+    url: "https://www.instagram.com/p/C2A16GsP5rj/",
   },
 ];
 
@@ -120,7 +120,12 @@ export function InstagramSection() {
                           <span className="font-semibold">{post.comments}</span>
                         </div>
                       </div>
-                      <Button size="sm" variant="secondary" className="mt-3">
+                      <Button
+                        size="sm"
+                        variant="secondary"
+                        className="mt-3"
+                        onClick={() => window.open(post.url, "_blank")}
+                      >
                         <Instagram className="h-4 w-4 mr-2" />
                         Ver no Instagram
                       </Button>
