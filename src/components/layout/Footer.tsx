@@ -99,19 +99,19 @@ export function Footer() {
             <h4 className="font-semibold mb-4 text-primary">Links Rápidos</h4>
             <div className="space-y-3 text-sm">
               <Link
-                href="/servicos"
+                href="#servicos"
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
                 Nossos Serviços
               </Link>
               <Link
-                href="/galeria"
+                href="#trabalhos"
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
                 Galeria de Trabalhos
               </Link>
               <Link
-                href="/contato"
+                href="#contatoLocalizacao"
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
                 Fale Conosco
