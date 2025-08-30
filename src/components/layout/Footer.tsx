@@ -1,9 +1,10 @@
 "use client";
 
-import { Calendar, Clock, Instagram, MapPin, Phone } from "lucide-react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BRAND } from "@/constants/brand";
+import { Calendar, Clock, Instagram, MapPin, Phone } from "lucide-react";
+import Imaga from "next/image";
+import Link from "next/link";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
