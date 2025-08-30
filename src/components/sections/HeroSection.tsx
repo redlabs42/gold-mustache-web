@@ -44,11 +44,11 @@ export function HeroSection() {
             </h1>
             {/* <div className="flex justify-center"> */}
             <Image
-              src="/logo-gold-mustache-removebg-preview.png"
+              src="/logo-new-02.png"
               alt="Gold Mustache Logo"
-              width={623}
-              height={400}
-              className="mx-auto rounded-full object-cover h-30"
+              width={300}
+              height={300}
+              className="mx-auto rounded-full object-cover"
             />
             {/* </div> */}
             <p className="text-xl md:text-2xl text-muted-foreground font-medium sr-only">

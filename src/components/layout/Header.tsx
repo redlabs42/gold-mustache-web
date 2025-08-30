@@ -1,9 +1,5 @@
 "use client";
 
-import { Calendar, Instagram, Menu } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -13,6 +9,10 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { BRAND } from "@/constants/brand";
+import { Calendar, Instagram, Menu } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +31,7 @@ export function Header() {
         >
           <div className="h-8 w-8 flex items-center justify-center">
             <Image
-              src="/logo.png"
+              src="/logo-new-02.png"
               alt="Gold Mustache Logo"
               width={32}
               height={32}
@@ -117,7 +117,7 @@ export function Header() {
                 <div className="flex items-center space-x-3 text-lg font-bold text-primary">
                   <div className="h-8 w-8 flex items-center justify-center">
                     <Image
-                      src="/logo.png"
+                      src="/logo-new-02.png"
                       alt="Gold Mustache Logo"
                       width={32}
                       height={32}

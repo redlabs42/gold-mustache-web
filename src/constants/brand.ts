@@ -26,6 +26,30 @@ export const BRAND = {
       "R. 115, 79 - Centro, Itapema - SC, 88220-000 - Gold Mustache Barbearia",
   },
 
+  contactVitor: {
+    phone: "47 98882-8032",
+    whatsapp: "+5547988828032",
+    // email: 'contato@goldmustache.com', // TODO: Add real email
+    address:
+      "R. 115, 79 - Centro, Itapema - SC, 88220-000 - Gold Mustache Barbearia",
+  },
+
+  contactJoao: {
+    phone: "47 99953-8340",
+    whatsapp: "+5547999538340",
+    // email: 'contato@goldmustache.com', // TODO: Add real email
+    address:
+      "R. 115, 79 - Centro, Itapema - SC, 88220-000 - Gold Mustache Barbearia",
+  },
+
+  contactDavid: {
+    phone: "51 98594-7566",
+    whatsapp: "+5551985947566",
+    // email: 'contato@goldmustache.com', // TODO: Add real email
+    address:
+      "R. 115, 79 - Centro, Itapema - SC, 88220-000 - Gold Mustache Barbearia",
+  },
+
   // Business Hours
   hours: {
     weekdays: "Segunda a Sexta: 10h às 20h",

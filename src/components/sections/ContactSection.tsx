@@ -1,14 +1,5 @@
 "use client";
 
-import {
-  Calendar,
-  Clock,
-  Instagram,
-  MapPin,
-  MessageSquare,
-  Navigation,
-  Phone,
-} from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -20,6 +11,15 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { BRAND } from "@/constants/brand";
+import {
+  Calendar,
+  Clock,
+  Instagram,
+  MapPin,
+  MessageSquare,
+  Navigation,
+  Phone,
+} from "lucide-react";
 
 export function ContactSection() {
   const handleBookingClick = () => {
@@ -32,6 +32,36 @@ export function ContactSection() {
     );
     window.open(
       `https://wa.me/${BRAND.contact.whatsapp}?text=${message}`,
+      "_blank",
+    );
+  };
+
+  const handleWhatsAppVitorClick = () => {
+    const message = encodeURIComponent(
+      "Olá! Gostaria de agendar um horário na Gold Mustache Barbearia.",
+    );
+    window.open(
+      `https://wa.me/${BRAND.contactVitor.whatsapp}?text=${message}`,
+      "_blank",
+    );
+  };
+
+  const handleWhatsAppJoaoClick = () => {
+    const message = encodeURIComponent(
+      "Olá! Gostaria de agendar um horário na Gold Mustache Barbearia.",
+    );
+    window.open(
+      `https://wa.me/${BRAND.contactJoao.whatsapp}?text=${message}`,
+      "_blank",
+    );
+  };
+
+  const handleWhatsAppDavidClick = () => {
+    const message = encodeURIComponent(
+      "Olá! Gostaria de agendar um horário na Gold Mustache Barbearia.",
+    );
+    window.open(
+      `https://wa.me/${BRAND.contactDavid.whatsapp}?text=${message}`,
       "_blank",
     );
   };
@@ -116,7 +146,7 @@ export function ContactSection() {
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
                   <Phone className="h-5 w-5 text-primary" />
-                  <span>Contato Direto</span>
+                  <span>Contato Direto Ygor Luan (proprietário)</span>
                 </CardTitle>
                 <CardDescription>Fale conosco</CardDescription>
               </CardHeader>
@@ -135,6 +165,80 @@ export function ContactSection() {
                 </Button>
               </CardContent>
             </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center space-x-2">
+                  <Phone className="h-5 w-5 text-primary" />
+                  <span>Contato Direto Vitor Maronez (proprietário)</span>
+                </CardTitle>
+                <CardDescription>Fale conosco</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-2">
+                  <p className="text-muted-foreground">Telefone</p>
+                  <p className="font-medium">{BRAND.contactVitor.phone}</p>
+                </div>
+                <Button
+                  onClick={handleWhatsAppVitorClick}
+                  className="w-full"
+                  variant="outline"
+                >
+                  <MessageSquare className="h-4 w-4 mr-2" />
+                  WhatsApp
+                </Button>
+              </CardContent>
+            </Card>
+
+            <div className="flex gap-4">
+              <Card className="flex-1">
+                <CardHeader>
+                  <CardTitle className="flex items-center space-x-2">
+                    <Phone className="h-5 w-5 text-primary" />
+                    <span>Barbeiro: João Vitor</span>
+                  </CardTitle>
+                  <CardDescription>Fale conosco</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="space-y-2">
+                    <p className="text-muted-foreground">Telefone</p>
+                    <p className="font-medium">{BRAND.contactJoao.phone}</p>
+                  </div>
+                  <Button
+                    onClick={handleWhatsAppJoaoClick}
+                    className="w-full"
+                    variant="outline"
+                  >
+                    <MessageSquare className="h-4 w-4 mr-2" />
+                    WhatsApp
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="flex-1">
+                <CardHeader>
+                  <CardTitle className="flex items-center space-x-2">
+                    <Phone className="h-5 w-5 text-primary" />
+                    <span>Barbeiro: David Trindade</span>
+                  </CardTitle>
+                  <CardDescription>Fale conosco</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="space-y-2">
+                    <p className="text-muted-foreground">Telefone</p>
+                    <p className="font-medium">{BRAND.contactDavid.phone}</p>
+                  </div>
+                  <Button
+                    onClick={handleWhatsAppDavidClick}
+                    className="w-full"
+                    variant="outline"
+                  >
+                    <MessageSquare className="h-4 w-4 mr-2" />
+                    WhatsApp
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
           </div>
 
           {/* Mapa Placeholder e Ações */}
@@ -163,11 +267,11 @@ export function ContactSection() {
             </Card>
 
             {/* Call to Actions */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="flex w-full">
               <Button
                 onClick={handleBookingClick}
                 size="lg"
-                className="h-auto py-4"
+                className="h-auto py-4 w-full"
               >
                 <Calendar className="h-5 w-5 mr-2" />
                 <div className="text-left">
@@ -176,7 +280,7 @@ export function ContactSection() {
                 </div>
               </Button>
 
-              <Button
+              {/* <Button
                 onClick={handleWhatsAppClick}
                 variant="outline"
                 size="lg"
@@ -184,10 +288,12 @@ export function ContactSection() {
               >
                 <MessageSquare className="h-5 w-5 mr-2" />
                 <div className="text-left">
-                  <div className="font-semibold">WhatsApp</div>
+                  <div className="font-semibold">
+                    WhatsApp Ygor (proprietário)
+                  </div>
                   <div className="text-xs opacity-90">Contato Direto</div>
                 </div>
-              </Button>
+              </Button> */}
             </div>
 
             <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
@@ -228,7 +334,7 @@ export function ContactSection() {
         </div>
 
         {/* Emergency Contact */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <Card className="max-w-lg mx-auto bg-secondary text-secondary-foreground">
             <CardContent className="py-6">
               <h3 className="font-semibold mb-2">Emergência ou Dúvidas?</h3>
@@ -241,7 +347,7 @@ export function ContactSection() {
               </Button>
             </CardContent>
           </Card>
-        </div>
+        </div> */}
       </div>
     </section>
   );

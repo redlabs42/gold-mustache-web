@@ -1,10 +1,10 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import { BRAND } from "@/constants/brand";
 import { Calendar, Clock, Instagram, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { BRAND } from "@/constants/brand";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,7 +22,7 @@ export function Footer() {
             <div className="flex items-center space-x-3 mb-4">
               <div className="h-8 w-8 flex items-center justify-center">
                 <Image
-                  src="/logo.png"
+                  src="/logo-new-02.png"
                   alt="Gold Mustache Logo"
                   width={32}
                   height={32}
