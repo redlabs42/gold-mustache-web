@@ -103,7 +103,11 @@ export function Header() {
         </div>
 
         {/* Mobile Menu */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center space-x-2">
+          <div className="flex items-center justify-between">
+            <span className="sr-only">Tema</span>
+            <ThemeToggle />
+          </div>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="sm">
@@ -112,7 +116,7 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-72">
-              <div className="flex flex-col space-y-6 mt-6">
+              <div className="flex flex-col space-y-6 mt-6 pl-4 pr-4">
                 {/* Mobile Logo */}
                 <div className="flex items-center space-x-3 text-lg font-bold text-primary">
                   <div className="h-8 w-8 flex items-center justify-center">
@@ -151,7 +155,7 @@ export function Header() {
                     Galeria
                   </Link>
                   <Link
-                    href="/contato"
+                    href="#contatoLocalizacao"
                     className="text-lg font-medium hover:text-primary transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
@@ -161,10 +165,6 @@ export function Header() {
 
                 {/* Mobile Actions */}
                 <div className="flex flex-col space-y-3 pt-4 border-t">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium">Tema</span>
-                    <ThemeToggle />
-                  </div>
                   <Button variant="outline" asChild className="w-full">
                     <Link
                       href={BRAND.instagram.mainUrl}
