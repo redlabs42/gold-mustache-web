@@ -47,7 +47,7 @@ export function Footer() {
                   href={BRAND.instagram.mainUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2"
+                  className="flex items-center space-x-2 border-primary/30 bg-background text-foreground hover:bg-primary/10 hover:text-primary hover:border-primary/50"
                 >
                   <Instagram className="h-4 w-4" />
                   <span>Barbearia</span>
@@ -58,7 +58,7 @@ export function Footer() {
                   href={BRAND.instagram.storeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2"
+                  className="flex items-center space-x-2 border-primary/30 bg-background text-foreground hover:bg-primary/10 hover:text-primary hover:border-primary/50"
                 >
                   <Instagram className="h-4 w-4" />
                   <span>Loja</span>
