@@ -38,7 +38,7 @@ export function Header() {
               className="rounded-full object-cover"
             />
           </div>
-          <span className="hidden sm:inline-block">Gold Mustache</span>
+          <span className="font-playfair">Gold Mustache</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -73,7 +73,7 @@ export function Header() {
                 href="#contatoLocalizacao"
                 className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
               >
-                Contato & Localização
+                Contato
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>

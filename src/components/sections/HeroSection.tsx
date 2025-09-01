@@ -70,9 +70,9 @@ export function HeroSection() {
             <Button
               size="lg"
               onClick={handleBookingClick}
-              className="text-lg px-8 py-6 h-auto min-w-[200px] font- font-bold"
+              className="text-lg px-8 py-6 h-auto min-w-[200px] font-semibold"
             >
-              <Calendar className="h-5 w-5 mr-3" />
+              <Calendar className="h-5 w-5" />
               Agendar Horário
             </Button>
             <Button
