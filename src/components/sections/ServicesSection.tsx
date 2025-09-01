@@ -130,8 +130,9 @@ export function ServicesSection() {
                 <Calendar className="h-5 w-5 mr-2" />
                 Agendar Combo Completo
               </Button>
+
               <Button variant="outline" size="lg" asChild className="flex-1">
-                <a href="/servicos">Ver Todos os Serviços</a>
+                <a href="#servicos">Ver Todos os Serviços</a>
               </Button>
             </CardFooter>
           </Card>
