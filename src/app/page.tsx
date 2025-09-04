@@ -2,6 +2,7 @@ import { ContactSection } from "@/components/sections/ContactSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { InstagramSection } from "@/components/sections/InstagramSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
+import { SponsorsSection } from "@/components/sections/SponsorsSection";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <InstagramSection />
+      <SponsorsSection />
       <ContactSection />
     </div>
   );

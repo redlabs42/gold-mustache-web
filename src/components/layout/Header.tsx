@@ -76,6 +76,14 @@ export function Header() {
                 Contato
               </Link>
             </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link
+                href="#sponsors"
+                className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
+              >
+                Patrocinadores
+              </Link>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
 
@@ -160,6 +168,13 @@ export function Header() {
                     onClick={() => setIsOpen(false)}
                   >
                     Contato
+                  </Link>
+                  <Link
+                    href="#sponsors"
+                    className="text-lg font-medium hover:text-primary transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Patrocinadores
                   </Link>
                 </nav>
 
