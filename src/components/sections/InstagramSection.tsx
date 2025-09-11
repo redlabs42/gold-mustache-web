@@ -3,6 +3,13 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { BRAND } from "@/constants/brand";
 import { ExternalLink, Heart, Instagram, MessageCircle } from "lucide-react";
 import Image from "next/image";
@@ -92,8 +99,72 @@ export function InstagramSection() {
           </div>
         </div>
 
-        {/* Instagram Feed Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {/* Mobile Carousel */}
+        <div className="md:hidden mb-12">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {mockInstagramPosts.map((post) => (
+                <CarouselItem
+                  key={post.id}
+                  className="pl-2 md:pl-4 basis-[85%] sm:basis-[70%]"
+                >
+                  <Card className="group overflow-hidden hover:shadow-lg transition-all duration-300 h-full">
+                    <CardContent className="p-0 relative">
+                      <div className="aspect-square relative overflow-hidden">
+                        <Image
+                          src={post.image}
+                          alt="Instagram post"
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                          <div className="text-white text-center space-y-2">
+                            <div className="flex items-center justify-center space-x-4">
+                              <div className="flex items-center space-x-1">
+                                <Heart className="h-5 w-5 fill-white" />
+                              </div>
+                              <div className="flex items-center space-x-1">
+                                <MessageCircle className="h-5 w-5" />
+                              </div>
+                            </div>
+                            <Button
+                              size="sm"
+                              variant="secondary"
+                              className="mt-3"
+                              onClick={() => window.open(post.url, "_blank")}
+                            >
+                              <Instagram className="h-4 w-4 mr-2" />
+                              Ver no Instagram
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Caption */}
+                      <div className="p-4">
+                        <p className="text-sm text-muted-foreground line-clamp-2">
+                          {post.caption}
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-2" />
+            <CarouselNext className="right-2" />
+          </Carousel>
+        </div>
+
+        {/* Desktop Grid */}
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {mockInstagramPosts.map((post) => (
             <Card
               key={post.id}

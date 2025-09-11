@@ -31,7 +31,7 @@ export function Header() {
         >
           <div className="h-8 w-8 flex items-center justify-center">
             <Image
-              src="/logo-new-02.png"
+              src="/logo.png"
               alt="Gold Mustache Logo"
               width={32}
               height={32}
@@ -156,7 +156,7 @@ export function Header() {
                     Serviços
                   </Link>
                   <Link
-                    href="#galeria"
+                    href="#trabalhos"
                     className="text-lg font-medium hover:text-primary transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
