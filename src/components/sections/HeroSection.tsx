@@ -44,7 +44,7 @@ export function HeroSection() {
             </h1>
             {/* <div className="flex justify-center"> */}
             <Image
-              src="/logo-new-02.png"
+              src="/logo.png"
               alt="Gold Mustache Logo"
               width={300}
               height={300}

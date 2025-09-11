@@ -20,21 +20,21 @@ const sponsors = [
   },
   {
     id: 2,
-    name: "Agência Panache Marketing",
-    logo: "/sponsors/panache-logo-instagram.jpeg",
-    website: "https://www.instagram.com/panache.mkt/",
-  },
-  {
-    id: 3,
     name: "Surf Trend",
     logo: "/sponsors/surf-trend-logo-facebook.jpeg",
     website: "https://www.surftrend.com.br/",
   },
   {
+    id: 3,
+    name: "Surf Trend",
+    logo: "/sponsors/surf-trend-logo-instagram.jpeg",
+    website: "https://www.surftrend.com.br/",
+  },
+  {
     id: 4,
-    name: "Agência Panache Marketing",
-    logo: "/sponsors/panache-logo-instagram.jpeg",
-    website: "https://www.instagram.com/panache.mkt/",
+    name: "Surf Trend",
+    logo: "/sponsors/surf-trend-logo-facebook.jpeg",
+    website: "https://www.surftrend.com.br/",
   },
   {
     id: 5,
@@ -44,21 +44,21 @@ const sponsors = [
   },
   {
     id: 6,
-    name: "Agência Panache Marketing",
-    logo: "/sponsors/panache-logo-instagram.jpeg",
-    website: "https://www.instagram.com/panache.mkt/",
-  },
-  {
-    id: 7,
     name: "Surf Trend",
     logo: "/sponsors/surf-trend-logo-facebook.jpeg",
     website: "https://www.surftrend.com.br/",
   },
   {
+    id: 7,
+    name: "Surf Trend",
+    logo: "/sponsors/surf-trend-logo-instagram.jpeg",
+    website: "https://www.surftrend.com.br/",
+  },
+  {
     id: 8,
-    name: "Agência Panache Marketing",
-    logo: "/sponsors/panache-logo-instagram.jpeg",
-    website: "https://www.instagram.com/panache.mkt/",
+    name: "Surf Trend",
+    logo: "/sponsors/surf-trend-logo-facebook.jpeg",
+    website: "https://www.surftrend.com.br/",
   },
 ];
 
