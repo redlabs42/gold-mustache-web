@@ -61,8 +61,51 @@ export function ServicesSection() {
           </p>
         </div>
 
+        {/* Featured Combo */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
+            <CardHeader className="text-center pb-4">
+              <Badge variant="secondary" className="mb-2 w-fit mx-auto">
+                Mais Popular
+              </Badge>
+              <CardTitle className="text-2xl md:text-3xl">
+                Combo Completo
+              </CardTitle>
+              <CardDescription className="text-lg">
+                Corte + Barba + Sobrancelha - O pacote completo para um visual
+                impecável
+              </CardDescription>
+            </CardHeader>
+
+            <CardContent className="text-center">
+              <div className="flex items-center justify-center space-x-4 mb-6">
+                <div className="text-lg text-muted-foreground line-through">
+                  R$ 115,00
+                </div>
+                <div className="text-3xl font-bold text-primary">R$ 100,00</div>
+                <Badge variant="destructive">Economize R$ 15</Badge>
+              </div>
+              <div className="flex items-center justify-center space-x-2 text-muted-foreground mb-6">
+                <Clock className="h-4 w-4" />
+                <span>Aproximadamente 60 minutos</span>
+              </div>
+            </CardContent>
+
+            <CardFooter className="flex flex-col sm:flex-row gap-4">
+              <Button
+                onClick={handleBookingClick}
+                size="default"
+                className="flex-1"
+              >
+                <Calendar className="h-5 w-5 mr-2" />
+                Agendar Combo Completo
+              </Button>
+            </CardFooter>
+          </Card>
+        </div>
+
         {/* Mobile Carousel */}
-        <div className="md:hidden mb-12">
+        <div className="md:hidden">
           <Carousel
             opts={{
               align: "start",
@@ -129,7 +172,7 @@ export function ServicesSection() {
         </div>
 
         {/* Desktop Grid */}
-        <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6">
           {SERVICES.map((service) => {
             const IconComponent =
               serviceIcons[service.id as keyof typeof serviceIcons];
@@ -177,49 +220,6 @@ export function ServicesSection() {
               </Card>
             );
           })}
-        </div>
-
-        {/* Featured Combo */}
-        <div className="max-w-4xl mx-auto">
-          <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
-            <CardHeader className="text-center pb-4">
-              <Badge variant="secondary" className="mb-2 w-fit mx-auto">
-                Mais Popular
-              </Badge>
-              <CardTitle className="text-2xl md:text-3xl">
-                Combo Completo
-              </CardTitle>
-              <CardDescription className="text-lg">
-                Corte + Barba + Sobrancelha - O pacote completo para um visual
-                impecável
-              </CardDescription>
-            </CardHeader>
-
-            <CardContent className="text-center">
-              <div className="flex items-center justify-center space-x-4 mb-6">
-                <div className="text-lg text-muted-foreground line-through">
-                  R$ 115,00
-                </div>
-                <div className="text-3xl font-bold text-primary">R$ 100,00</div>
-                <Badge variant="destructive">Economize R$ 15</Badge>
-              </div>
-              <div className="flex items-center justify-center space-x-2 text-muted-foreground mb-6">
-                <Clock className="h-4 w-4" />
-                <span>Aproximadamente 60 minutos</span>
-              </div>
-            </CardContent>
-
-            <CardFooter className="flex flex-col sm:flex-row gap-4">
-              <Button onClick={handleBookingClick} size="lg" className="flex-1">
-                <Calendar className="h-5 w-5 mr-2" />
-                Agendar Combo Completo
-              </Button>
-
-              <Button variant="outline" size="lg" asChild className="flex-1">
-                <a href="#servicos">Ver Todos os Serviços</a>
-              </Button>
-            </CardFooter>
-          </Card>
         </div>
       </div>
     </section>
