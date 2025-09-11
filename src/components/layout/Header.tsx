@@ -129,7 +129,7 @@ export function Header() {
                 <div className="flex items-center space-x-3 text-lg font-bold text-primary">
                   <div className="h-8 w-8 flex items-center justify-center">
                     <Image
-                      src="/logo-new-02.png"
+                      src="/logo.png"
                       alt="Gold Mustache Logo"
                       width={32}
                       height={32}

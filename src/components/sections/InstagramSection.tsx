@@ -11,7 +11,7 @@ import Image from "next/image";
 const mockInstagramPosts = [
   {
     id: "1",
-    image: "/post-1.jpg",
+    image: "/images/ig/post-1.jpg",
     caption:
       "Agenda aberta para transformar seu visual na Barbearia Gold Mustache! 💈✂️ #goldmustache #barbearia",
     // likes: 45,
@@ -20,7 +20,7 @@ const mockInstagramPosts = [
   },
   {
     id: "2",
-    image: "/post-2.jpg",
+    image: "/images/ig/post-2.jpg",
     caption:
       "✂️ Agende já o seu horário na Barbearia Gold Mustache! 💈 #barba #estilo",
     // likes: 32,
@@ -29,7 +29,7 @@ const mockInstagramPosts = [
   },
   {
     id: "3",
-    image: "/post-3.jpg",
+    image: "/images/ig/post-3.jpg",
     caption:
       "Experimente a excelência no cuidado com a Barbearia Gold Mustache. 🪑",
     // likes: 28,
@@ -38,7 +38,7 @@ const mockInstagramPosts = [
   },
   {
     id: "4",
-    image: "/post-4.jpg",
+    image: "/images/ig/post-4.jpg",
     caption:
       "✨✂️ O tratamento que você merece está aqui na Gold Mustache. Agende seu horário e descubra o cuidado premium que fará você se sentir no topo da elegância. Sua barba, seu estilo, nossa expertise. 💈👑",
     // likes: 38,
