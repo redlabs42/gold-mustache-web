@@ -78,7 +78,7 @@ export function Header() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link
-                href="#sponsors"
+                href="#parceiros"
                 className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
               >
                 Patrocinadores
@@ -170,7 +170,7 @@ export function Header() {
                     Contato
                   </Link>
                   <Link
-                    href="#sponsors"
+                    href="#parceiros"
                     className="text-lg font-medium hover:text-primary transition-colors"
                     onClick={() => setIsOpen(false)}
                   >

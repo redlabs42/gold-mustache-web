@@ -76,7 +76,7 @@ export function SponsorsSection() {
   }, [api]);
 
   return (
-    <section id="sponsors" className="py-16 bg-muted/30">
+    <section id="parceiros" className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <Badge variant="outline" className="mb-4">

@@ -31,6 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    {
+      url: `${baseUrl}/#parceiros`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.4,
+    },
   ];
 
   // Service-specific pages (virtual pages for SEO)
