@@ -75,7 +75,7 @@ export function ContactSection() {
   };
 
   return (
-    <section className="py-20 bg-muted/30" id="contatoLocalizacao">
+    <section className="py-20 bg-muted/30" id="contato">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4">

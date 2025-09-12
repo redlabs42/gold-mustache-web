@@ -3,7 +3,10 @@ export const BRAND = {
   tagline: "Tradição e Estilo Masculino",
   location: "Itapema, Santa Catarina",
 
-  // Social Media
+  analytics: {
+    googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID || "",
+  },
+
   instagram: {
     main: "@goldmustachebarbearia",
     store: "@_goldlab",
@@ -11,13 +14,11 @@ export const BRAND = {
     storeUrl: "https://instagram.com/_goldlab",
   },
 
-  // Booking System
   booking: {
     inbarberUrl:
       "https://chat.inbarberapp.com/?id=6c060e9d-672d-4f39-bbc4-fac594f4cc28",
   },
 
-  // Contact Information
   contact: {
     phone: "47 98904-6178",
     whatsapp: "+5547989046178",

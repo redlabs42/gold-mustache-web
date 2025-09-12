@@ -62,15 +62,15 @@ export function Header() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link
-                href="#trabalhos"
+                href="#instagram"
                 className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
               >
-                Trabalhos
+                Instagram
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link
-                href="#contatoLocalizacao"
+                href="#contato"
                 className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
               >
                 Contato
@@ -156,14 +156,14 @@ export function Header() {
                     Serviços
                   </Link>
                   <Link
-                    href="#trabalhos"
+                    href="#instagram"
                     className="text-lg font-medium hover:text-primary transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
                     Galeria
                   </Link>
                   <Link
-                    href="#contatoLocalizacao"
+                    href="#contato"
                     className="text-lg font-medium hover:text-primary transition-colors"
                     onClick={() => setIsOpen(false)}
                   >

@@ -105,13 +105,13 @@ export function Footer() {
                 Nossos Serviços
               </Link>
               <Link
-                href="#trabalhos"
+                href="#instagram"
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
-                Galeria de Trabalhos
+                Instagram
               </Link>
               <Link
-                href="#contatoLocalizacao"
+                href="#contato"
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
                 Fale Conosco

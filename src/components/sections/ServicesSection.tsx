@@ -120,6 +120,7 @@ export function ServicesSection() {
 
                 return (
                   <CarouselItem
+                    id={`servico-${service.id}`}
                     key={service.id}
                     className="pl-2 md:pl-4 basis-[85%] sm:basis-[70%]"
                   >
@@ -179,6 +180,7 @@ export function ServicesSection() {
 
             return (
               <Card
+                id={`servico-${service.id}`}
                 key={service.id}
                 className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
