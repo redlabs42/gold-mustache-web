@@ -9,6 +9,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { BRAND } from "@/constants/brand";
+import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { Calendar, Instagram, Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,6 +17,7 @@ import { useState } from "react";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const { isScrolledPastThreshold } = useScrollPosition(300);
 
   const handleBookingClick = () => {
     window.open(BRAND.booking.inbarberUrl, "_blank", "noopener,noreferrer");
@@ -101,13 +103,15 @@ export function Header() {
               <span>Instagram</span>
             </Link>
           </Button>
-          <Button
-            onClick={handleBookingClick}
-            className="flex items-center space-x-2"
-          >
-            <Calendar className="h-4 w-4" />
-            <span>Agendar</span>
-          </Button>
+          {!isScrolledPastThreshold && (
+            <Button
+              onClick={handleBookingClick}
+              className="flex items-center space-x-2 transition-all duration-300"
+            >
+              <Calendar className="h-4 w-4" />
+              <span>Agendar</span>
+            </Button>
+          )}
         </div>
 
         {/* Mobile Menu */}
