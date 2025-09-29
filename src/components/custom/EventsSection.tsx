@@ -7,7 +7,7 @@ export function EventsSection() {
   const { heading, subheading, videoId, strong } = EVENTS_SECTION;
 
   return (
-    <section id="events" className="py-20 bg-background">
+    <section id="eventos" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="mx-auto mb-12 max-w-2xl text-center md:mb-16">
           <Badge variant="outline" className="mb-4">
