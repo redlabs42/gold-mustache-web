@@ -14,7 +14,6 @@ import { BRAND } from "@/constants/brand";
 import { ExternalLink, Heart, Instagram, MessageCircle } from "lucide-react";
 import Image from "next/image";
 
-// Mock data for Instagram posts - será substituído pela integração real
 const mockInstagramPosts = [
   {
     id: "1",

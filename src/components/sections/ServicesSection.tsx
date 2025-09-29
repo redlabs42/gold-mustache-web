@@ -19,18 +19,18 @@ import {
 } from "@/components/ui/carousel";
 import { Separator } from "@/components/ui/separator";
 import { BRAND, SERVICES } from "@/constants/brand";
-import { Calendar, Clock, ShirtIcon as Razor, Scissors } from "lucide-react";
+import { Calendar, Clock, Scissors } from "lucide-react";
 
 const serviceIcons = {
   "corte-tradicional": Scissors,
   "corte-degrade": Scissors,
   "corte-barba": Scissors,
-  "barba-completa": Razor,
-  bigode: Razor,
+  "barba-completa": Scissors,
+  bigode: Scissors,
   "sobrancelha-na-navalha": Scissors,
   "corte-americano": Scissors,
   "corte-low-fade": Scissors,
-  "cera-nariz-ouvido": Razor,
+  "cera-nariz-ouvido": Scissors,
   "corte-degrade-tradicional": Scissors,
   "corte-degrade-na-zero": Scissors,
   "progressiva-relaxamento": Scissors,
@@ -49,6 +49,7 @@ export function ServicesSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4">
+            <Scissors className="h-4 w-4 mr-2" />
             Nossos Serviços
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
