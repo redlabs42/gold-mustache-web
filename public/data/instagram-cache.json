@@ -1,0 +1,30 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "image": "/images/ig/post-1.jpg",
+      "caption": "Agenda aberta para transformar seu visual na Barbearia Gold Mustache! 💈✂️ #goldmustache #barbearia",
+      "url": "https://www.instagram.com/p/C4d6isbPcrv/"
+    },
+    {
+      "id": "2",
+      "image": "/images/ig/post-2.jpg",
+      "caption": "✂️ Agende já o seu horário na Barbearia Gold Mustache! 💈 #barba #estilo",
+      "url": "https://www.instagram.com/p/C3ntXR2P-OR/"
+    },
+    {
+      "id": "3",
+      "image": "/images/ig/post-3.jpg",
+      "caption": "Experimente a excelência no cuidado com a Barbearia Gold Mustache. 🪑",
+      "url": "https://www.instagram.com/p/C29pPW7ORnf/"
+    },
+    {
+      "id": "4",
+      "image": "/images/ig/post-4.jpg",
+      "caption": "✨✂️ O tratamento que você merece está aqui na Gold Mustache. Agende seu horário e descubra o cuidado premium que fará você se sentir no topo da elegância. Sua barba, seu estilo, nossa expertise. 💈👑",
+      "url": "https://www.instagram.com/p/C2A16GsP5rj/"
+    }
+  ],
+  "lastUpdated": "2025-10-10T10:00:00.000Z",
+  "source": "mock"
+}

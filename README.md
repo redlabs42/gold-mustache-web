@@ -55,7 +55,26 @@ O sistema de agendamento utiliza o **Inbarber App** já estabelecido:
 
 ## Instagram Integration
 
-- **@goldmustachebarbearia**: Trabalhos e ambiente da barbearia  
+- **@goldmustachebarbearia**: Trabalhos e ambiente da barbearia
 - **@_goldlab**: Produtos para venda
 
-Feeds atualizados automaticamente com cache inteligente e fallbacks.
+### Sincronização Automática
+
+O site sincroniza automaticamente os últimos 10 posts do Instagram 1x por dia (7h BRT) usando a Instagram Graph API.
+
+**Configuração necessária:**
+
+1. Criar app no Meta for Developers
+2. Obter Access Token de longa duração (60 dias)
+3. Configurar variáveis de ambiente na Vercel:
+   - `INSTAGRAM_ACCESS_TOKEN`
+   - `INSTAGRAM_USER_ID`
+   - `CRON_SECRET`
+
+**Guia completo:** Veja [INSTAGRAM_SETUP.md](./INSTAGRAM_SETUP.md) para instruções passo a passo.
+
+**Funcionamento:**
+- Vercel Cron Job sincroniza posts diariamente
+- Cache local em `public/data/instagram-cache.json`
+- Fallback automático para posts mockados se houver erro
+- Zero custo (API gratuita + Vercel Cron free tier)

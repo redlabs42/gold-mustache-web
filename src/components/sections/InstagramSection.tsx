@@ -11,17 +11,17 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { BRAND } from "@/constants/brand";
+import type { InstagramPost } from "@/types/instagram";
 import { ExternalLink, Heart, Instagram, MessageCircle } from "lucide-react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
-const mockInstagramPosts = [
+const mockInstagramPosts: InstagramPost[] = [
   {
     id: "1",
     image: "/images/ig/post-1.jpg",
     caption:
       "Agenda aberta para transformar seu visual na Barbearia Gold Mustache! 💈✂️ #goldmustache #barbearia",
-    // likes: 45,
-    // comments: 8,
     url: "https://www.instagram.com/p/C4d6isbPcrv/",
   },
   {
@@ -29,8 +29,6 @@ const mockInstagramPosts = [
     image: "/images/ig/post-2.jpg",
     caption:
       "✂️ Agende já o seu horário na Barbearia Gold Mustache! 💈 #barba #estilo",
-    // likes: 32,
-    // comments: 5,
     url: "https://www.instagram.com/p/C3ntXR2P-OR/",
   },
   {
@@ -38,8 +36,6 @@ const mockInstagramPosts = [
     image: "/images/ig/post-3.jpg",
     caption:
       "Experimente a excelência no cuidado com a Barbearia Gold Mustache. 🪑",
-    // likes: 28,
-    // comments: 3,
     url: "https://www.instagram.com/p/C29pPW7ORnf/",
   },
   {
@@ -47,13 +43,44 @@ const mockInstagramPosts = [
     image: "/images/ig/post-4.jpg",
     caption:
       "✨✂️ O tratamento que você merece está aqui na Gold Mustache. Agende seu horário e descubra o cuidado premium que fará você se sentir no topo da elegância. Sua barba, seu estilo, nossa expertise. 💈👑",
-    // likes: 38,
-    // comments: 7,
     url: "https://www.instagram.com/p/C2A16GsP5rj/",
   },
 ];
 
 export function InstagramSection() {
+  const [posts, setPosts] = useState<InstagramPost[]>(mockInstagramPosts);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    async function loadInstagramPosts() {
+      try {
+        const response = await fetch("/api/instagram/posts");
+
+        if (!response.ok) {
+          console.warn("Erro ao buscar posts do Instagram, usando fallback");
+          setPosts(mockInstagramPosts);
+          return;
+        }
+
+        const data = await response.json();
+
+        if (data.posts && data.posts.length > 0) {
+          setPosts(data.posts);
+        } else {
+          setPosts(mockInstagramPosts);
+        }
+      } catch (error) {
+        console.warn("Erro ao buscar posts do Instagram:", error);
+        setPosts(mockInstagramPosts);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+
+    loadInstagramPosts();
+  }, []);
+
+  const displayPosts = isLoading ? mockInstagramPosts : posts;
   return (
     <section id="instagram" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -108,7 +135,7 @@ export function InstagramSection() {
             className="w-full"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
-              {mockInstagramPosts.map((post) => (
+              {displayPosts.map((post) => (
                 <CarouselItem
                   key={post.id}
                   className="pl-2 md:pl-4 basis-[85%] sm:basis-[70%]"
@@ -164,7 +191,7 @@ export function InstagramSection() {
 
         {/* Desktop Grid */}
         <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {mockInstagramPosts.map((post) => (
+          {displayPosts.map((post) => (
             <Card
               key={post.id}
               className="group overflow-hidden hover:shadow-lg transition-all duration-300"
@@ -183,13 +210,9 @@ export function InstagramSection() {
                       <div className="flex items-center justify-center space-x-4">
                         <div className="flex items-center space-x-1">
                           <Heart className="h-5 w-5 fill-white" />
-                          {/* <span className="font-semibold">{post?.likes}</span> */}
                         </div>
                         <div className="flex items-center space-x-1">
                           <MessageCircle className="h-5 w-5" />
-                          <span className="font-semibold">
-                            {/* {post?.comments} */}
-                          </span>
                         </div>
                       </div>
                       <Button
