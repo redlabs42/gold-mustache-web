@@ -38,8 +38,8 @@ export function Footer() {
             </div>
             <p className="text-muted-foreground mb-6 max-w-md">
               Barbearia tradicional em Itapema, oferecendo serviços de qualidade
-              com mais de 10 anos de experiência em cortes masculinos clássicos
-              e modernos.
+              com mais de 6 anos de experiência em cortes masculinos clássicos e
+              modernos.
             </p>
             <div className="flex space-x-3">
               <Button variant="outline" size="sm" asChild>

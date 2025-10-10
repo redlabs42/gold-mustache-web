@@ -2,7 +2,7 @@ import {
   fetchInstagramPosts,
   validateInstagramConfig,
 } from "@/services/instagram";
-import type { InstagramCacheData } from "@/types/instagram";
+import type { InstagramCacheData, InstagramPost } from "@/types/instagram";
 import { NextResponse } from "next/server";
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
@@ -41,7 +41,7 @@ export async function POST(request: Request) {
     console.log("[Instagram Cron] Iniciando sincronização...");
 
     // Buscar posts do Instagram com retry
-    let posts = [];
+    let posts: InstagramPost[] = [];
     let retryCount = 0;
     const maxRetries = 3;
 
