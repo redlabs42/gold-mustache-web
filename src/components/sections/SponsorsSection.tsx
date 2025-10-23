@@ -101,7 +101,7 @@ export function SponsorsSection() {
           }}
           className="w-full"
         >
-          <CarouselContent className="-ml-2 md:-ml-4">
+          <CarouselContent className="-ml-2 md:-ml-4 cursor-pointer hover:border-primary">
             {sponsors.map((sponsor) => (
               <CarouselItem
                 key={sponsor.id}
@@ -112,7 +112,7 @@ export function SponsorsSection() {
                     href={sponsor.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block group"
+                    className="block group cursor-pointer"
                   >
                     <div className="bg-accent rounded-lg shadow-sm hover:shadow-md transition-all duration-300 p-6 h-40 flex items-center justify-center group-hover:scale-105">
                       <Image

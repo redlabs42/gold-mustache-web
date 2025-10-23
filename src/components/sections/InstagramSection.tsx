@@ -110,7 +110,12 @@ export function InstagramSection() {
                 <ExternalLink className="h-4 w-4" />
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button
+              asChild
+              variant="default"
+              size="lg"
+              className="cursor-pointer bg-purple-600 hover:bg-purple-700 text-white"
+            >
               <a
                 href={BRAND.instagram.storeUrl}
                 target="_blank"

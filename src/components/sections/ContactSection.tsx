@@ -79,7 +79,8 @@ export function ContactSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4">
-            Contato & Localização
+            <MapPin className="h-4 w-4 mr-2" />
+            <span>Contato & Localização</span>
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Venha nos <span className="text-primary">Visitar</span>
@@ -107,8 +108,8 @@ export function ContactSection() {
                 </p>
                 <Button
                   onClick={handleDirectionsClick}
-                  variant="outline"
-                  className="w-full"
+                  variant="default"
+                  className="w-full cursor-pointer"
                 >
                   <Navigation className="h-4 w-4 mr-2" />
                   Como Chegar
@@ -157,8 +158,8 @@ export function ContactSection() {
                 </div>
                 <Button
                   onClick={handleWhatsAppClick}
-                  className="w-full"
-                  variant="outline"
+                  className="w-full cursor-pointer"
+                  variant="default"
                 >
                   <MessageSquare className="h-4 w-4 mr-2" />
                   WhatsApp
@@ -181,8 +182,8 @@ export function ContactSection() {
                 </div>
                 <Button
                   onClick={handleWhatsAppVitorClick}
-                  className="w-full"
-                  variant="outline"
+                  className="w-full cursor-pointer"
+                  variant="default"
                 >
                   <MessageSquare className="h-4 w-4 mr-2" />
                   WhatsApp
@@ -206,8 +207,8 @@ export function ContactSection() {
                   </div>
                   <Button
                     onClick={handleWhatsAppJoaoClick}
-                    className="w-full"
-                    variant="outline"
+                    className="w-full cursor-pointer"
+                    variant="default"
                   >
                     <MessageSquare className="h-4 w-4 mr-2" />
                     WhatsApp
@@ -230,8 +231,8 @@ export function ContactSection() {
                   </div>
                   <Button
                     onClick={handleWhatsAppDavidClick}
-                    className="w-full"
-                    variant="outline"
+                    className="w-full cursor-pointer"
+                    variant="default"
                   >
                     <MessageSquare className="h-4 w-4 mr-2" />
                     WhatsApp
@@ -305,7 +306,12 @@ export function ContactSection() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex flex-col space-y-2">
-                  <Button asChild variant="outline" size="sm">
+                  <Button
+                    asChild
+                    variant="default"
+                    size="sm"
+                    className="cursor-pointer"
+                  >
                     <a
                       href={BRAND.instagram.mainUrl}
                       target="_blank"
@@ -316,12 +322,16 @@ export function ContactSection() {
                       <span>@goldmustachebarbearia</span>
                     </a>
                   </Button>
-                  <Button asChild variant="outline" size="sm">
+                  <Button
+                    asChild
+                    variant="default"
+                    size="sm"
+                    className="cursor-pointer bg-purple-600 hover:bg-purple-700 text-white"
+                  >
                     <a
                       href={BRAND.instagram.storeUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center space-x-2"
                     >
                       <Instagram className="h-4 w-4" />
                       <span>@_goldlab</span>

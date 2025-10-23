@@ -44,7 +44,7 @@ export function EventsSection() {
               className="flex items-center justify-center space-x-2"
             >
               <MessageCircle className="h-5 w-5" />
-              <span>Falar com o Ygor no WhatsApp</span>
+              <span>Entrar em contato</span>
             </a>
           </Button>
         </div>

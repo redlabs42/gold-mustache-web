@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/carousel";
 import { Separator } from "@/components/ui/separator";
 import { BRAND, SERVICES } from "@/constants/brand";
-import { Calendar, Clock, Scissors } from "lucide-react";
+import { Calendar, Clock, Scissors, Star } from "lucide-react";
 
 const serviceIcons = {
   "corte-tradicional": Scissors,
@@ -66,7 +66,8 @@ export function ServicesSection() {
         <div className="max-w-4xl mx-auto mb-12">
           <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
             <CardHeader className="text-center pb-4">
-              <Badge variant="secondary" className="mb-2 w-fit mx-auto">
+              <Badge variant="default" className="mb-2 w-fit mx-auto">
+                <Star className="h-4 w-4 mr-2" />
                 Mais Popular
               </Badge>
               <CardTitle className="text-2xl md:text-3xl">
@@ -96,7 +97,7 @@ export function ServicesSection() {
               <Button
                 onClick={handleBookingClick}
                 size="default"
-                className="flex-1"
+                className="w-full max-w-xs mx-auto cursor-pointer"
               >
                 <Calendar className="h-5 w-5 mr-2" />
                 Agendar Combo Completo
@@ -156,8 +157,8 @@ export function ServicesSection() {
                       <CardFooter>
                         <Button
                           onClick={handleBookingClick}
-                          className="w-full"
-                          variant="outline"
+                          className="w-full cursor-pointer"
+                          variant="default"
                         >
                           <Calendar className="h-4 w-4 mr-2" />
                           Agendar {service.name}
@@ -183,7 +184,7 @@ export function ServicesSection() {
               <Card
                 id={`servico-${service.id}`}
                 key={service.id}
-                className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-primary"
               >
                 <CardHeader className="text-center pb-4">
                   <div className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -213,8 +214,8 @@ export function ServicesSection() {
                 <CardFooter>
                   <Button
                     onClick={handleBookingClick}
-                    className="w-full"
-                    variant="outline"
+                    className="w-full cursor-pointer"
+                    variant="default"
                   >
                     <Calendar className="h-4 w-4 mr-2" />
                     Agendar {service.name}
