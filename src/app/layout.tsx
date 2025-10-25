@@ -2,6 +2,7 @@ import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { Layout } from "@/components/layout/Layout";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
+import { LoadingElevatorWrapper } from "@/components/ui/loading-elevator-wrapper";
 import { BRAND } from "@/constants/brand";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
@@ -128,6 +129,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} antialiased`}
       >
         <GoogleAnalytics trackingId={BRAND.analytics.googleAnalyticsId} />
+        <LoadingElevatorWrapper />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
