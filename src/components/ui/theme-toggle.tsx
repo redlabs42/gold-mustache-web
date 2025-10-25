@@ -1,9 +1,9 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import * as React from "react";
-import { Button } from "@/components/ui/button";
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
@@ -13,28 +13,54 @@ export function ThemeToggle() {
     setMounted(true);
   }, []);
 
+  const isDark = theme === "dark";
+
   if (!mounted) {
     return (
-      <Button variant="ghost" size="sm" className="h-9 w-9 px-0">
-        <Sun className="h-[1.2rem] w-[1.2rem]" />
+      <div className="relative h-8 w-14 rounded-full bg-gray-200 dark:bg-gray-800">
+        <div className="absolute inset-0 flex items-center justify-between px-2">
+          <Sun className="h-4 w-4 text-yellow-500" />
+          <Moon className="h-4 w-4 text-gray-400" />
+        </div>
         <span className="sr-only">Toggle theme</span>
-      </Button>
+      </div>
     );
   }
 
   return (
-    <Button
-      variant="ghost"
-      size="sm"
-      className="h-9 w-9 px-0"
-      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+    <button
+      type="button"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      className="relative h-8 w-14 rounded-full bg-gray-200 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-ring/50 focus:ring-offset-2 dark:bg-gray-800"
+      aria-label="Toggle theme"
+      role="switch"
+      aria-checked={isDark}
     >
-      {theme === "light" ? (
-        <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-      ) : (
-        <Moon className="h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-      )}
+      <div className="absolute inset-0 flex items-center justify-between px-2">
+        <Sun
+          className={`h-4 w-4 transition-colors duration-300 ${
+            isDark ? "text-gray-400" : "text-yellow-500"
+          }`}
+        />
+        <Moon
+          className={`h-4 w-4 transition-colors duration-300 ${
+            isDark ? "text-blue-400" : "text-gray-400"
+          }`}
+        />
+      </div>
+      <motion.div
+        className="absolute left-1 top-1 h-6 w-6 rounded-full bg-white shadow-md"
+        initial={false}
+        animate={{
+          x: isDark ? 24 : 0,
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 700,
+          damping: 30,
+        }}
+      />
       <span className="sr-only">Toggle theme</span>
-    </Button>
+    </button>
   );
 }
