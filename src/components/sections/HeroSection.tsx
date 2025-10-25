@@ -20,15 +20,15 @@ export function HeroSection() {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Badges */}
           <div className="flex flex-wrap justify-center gap-3">
-            <Badge variant="secondary" className="text-sm px-4 py-2">
+            <Badge variant="default" className="text-sm px-4 py-2">
               <MapPin className="h-4 w-4 mr-2" />
               Itapema, SC
             </Badge>
-            <Badge variant="secondary" className="text-sm px-4 py-2">
+            <Badge variant="default" className="text-sm px-4 py-2">
               <Clock className="h-4 w-4 mr-2" />
               Segunda a Sábado
             </Badge>
-            <Badge variant="secondary" className="text-sm px-4 py-2">
+            <Badge variant="default" className="text-sm px-4 py-2">
               <Star className="h-4 w-4 mr-2 fill-primary text-primary" />
               +6 anos de experiência
             </Badge>

@@ -114,7 +114,7 @@ export function SponsorsSection() {
                     rel="noopener noreferrer"
                     className="block group cursor-pointer"
                   >
-                    <div className="bg-accent rounded-lg shadow-sm hover:shadow-md transition-all duration-300 p-6 h-40 flex items-center justify-center group-hover:scale-105">
+                    <div className="rounded-lg transition-all duration-300 p-6 h-40 flex items-center justify-center group-hover:scale-105">
                       <Image
                         src={sponsor.logo}
                         alt={sponsor.name}
