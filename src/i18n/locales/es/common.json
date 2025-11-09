@@ -1,0 +1,14 @@
+{
+  "buttons": {
+    "book": "Reservar",
+    "follow": "Seguir en Instagram",
+    "bookAppointment": "Reservar Cita",
+    "close": "Cerrar"
+  },
+  "aria": {
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "changeLanguage": "Cambiar idioma",
+    "toggleTheme": "Cambiar tema"
+  }
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { LanguageSwitcher } from "@/components/ui/language-switcher";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -13,11 +14,14 @@ import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { Calendar, Instagram, Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { isScrolledPastThreshold } = useScrollPosition(300);
+  const t = useTranslations("navigation");
+  const tCommon = useTranslations("common");
 
   const handleBookingClick = () => {
     window.open(BRAND.booking.inbarberUrl, "_blank", "noopener,noreferrer");
@@ -50,7 +54,7 @@ export function Header() {
                 href="/"
                 className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
               >
-                Início
+                {t("home")}
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -58,7 +62,7 @@ export function Header() {
                 href="#servicos"
                 className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
               >
-                Serviços
+                {t("services")}
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -66,7 +70,7 @@ export function Header() {
                 href="#instagram"
                 className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
               >
-                Instagram
+                {t("instagram")}
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -74,7 +78,7 @@ export function Header() {
                 href="#eventos"
                 className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
               >
-                Eventos
+                {t("events")}
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -82,7 +86,7 @@ export function Header() {
                 href="#contato"
                 className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
               >
-                Contato
+                {t("contact")}
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -90,7 +94,7 @@ export function Header() {
                 href="#parceiros"
                 className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
               >
-                Patrocinadores
+                {t("sponsors")}
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -98,6 +102,7 @@ export function Header() {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center space-x-3">
+          <LanguageSwitcher variant="desktop" />
           <ThemeToggle />
           <Button variant="outline" size="sm" asChild>
             <Link
@@ -107,7 +112,7 @@ export function Header() {
               className="flex items-center space-x-2"
             >
               <Instagram className="h-4 w-4" />
-              <span>Instagram</span>
+              <span>{t("instagram")}</span>
             </Link>
           </Button>
           {!isScrolledPastThreshold && (
@@ -116,7 +121,7 @@ export function Header() {
               className="flex items-center space-x-2 transition-all duration-300"
             >
               <Calendar className="h-4 w-4" />
-              <span>Agendar</span>
+              <span>{tCommon("buttons.book")}</span>
             </Button>
           )}
         </div>
@@ -124,14 +129,14 @@ export function Header() {
         {/* Mobile Menu */}
         <div className="md:hidden flex items-center space-x-2">
           <div className="flex items-center justify-between">
-            <span className="sr-only">Tema</span>
+            <span className="sr-only">{tCommon("aria.toggleTheme")}</span>
             <ThemeToggle />
           </div>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="sm">
                 <Menu className="h-5 w-5" />
-                <span className="sr-only">Abrir menu</span>
+                <span className="sr-only">{tCommon("aria.openMenu")}</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-72">
@@ -150,6 +155,9 @@ export function Header() {
                   <span className="font-playfair">Gold Mustache</span>
                 </div>
 
+                {/* Language Switcher - Mobile */}
+                <LanguageSwitcher variant="mobile" />
+
                 {/* Mobile Navigation */}
                 <nav className="flex flex-col space-y-4">
                   <Link
@@ -157,42 +165,42 @@ export function Header() {
                     className="text-lg font-medium hover:text-primary transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
-                    Início
+                    {t("home")}
                   </Link>
                   <Link
                     href="#servicos"
                     className="text-lg font-medium hover:text-primary transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
-                    Serviços
+                    {t("services")}
                   </Link>
                   <Link
                     href="#instagram"
                     className="text-lg font-medium hover:text-primary transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
-                    Instagram
+                    {t("instagram")}
                   </Link>
                   <Link
                     href="#eventos"
                     className="text-lg font-medium hover:text-primary transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
-                    Eventos
+                    {t("events")}
                   </Link>
                   <Link
                     href="#contato"
                     className="text-lg font-medium hover:text-primary transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
-                    Contato
+                    {t("contact")}
                   </Link>
                   <Link
                     href="#parceiros"
                     className="text-lg font-medium hover:text-primary transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
-                    Patrocinadores
+                    {t("sponsors")}
                   </Link>
                 </nav>
 
@@ -206,7 +214,7 @@ export function Header() {
                       className="flex items-center justify-center space-x-2"
                     >
                       <Instagram className="h-4 w-4" />
-                      <span>Seguir no Instagram</span>
+                      <span>{tCommon("buttons.follow")}</span>
                     </Link>
                   </Button>
                   <Button
@@ -214,7 +222,7 @@ export function Header() {
                     className="w-full flex items-center justify-center space-x-2"
                   >
                     <Calendar className="h-4 w-4" />
-                    <span>Agendar Horário</span>
+                    <span>{tCommon("buttons.bookAppointment")}</span>
                   </Button>
                 </div>
               </div>

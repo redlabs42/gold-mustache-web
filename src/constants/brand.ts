@@ -1,7 +1,7 @@
 export const BRAND = {
   name: "Gold Mustache Barbearia",
-  tagline: "Tradição e Estilo Masculino",
-  location: "Itapema, Santa Catarina",
+  // tagline and location now come from i18n translations
+  // Use t('brand.tagline') and t('brand.location')
 
   analytics: {
     googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID || "",
@@ -51,12 +51,8 @@ export const BRAND = {
       "R. 115, 79 - Centro, Itapema - SC, 88220-000 - Gold Mustache Barbearia",
   },
 
-  // Business Hours
-  hours: {
-    weekdays: "Segunda a Sexta: 10h às 20h",
-    saturday: "Sábado: 10h às 20h",
-    sunday: "Domingo: Fechado",
-  },
+  // Business Hours - now come from i18n translations
+  // Use t('contact.hours.weekdays'), t('contact.hours.time'), etc.
 
   // Brand Colors (for use in custom components)
   colors: {
@@ -68,109 +64,81 @@ export const BRAND = {
   },
 } as const;
 
+// Services array - name and description come from i18n translations
+// Use t(`services.items.${service.id}.name`) to get translated name
 export const SERVICES = [
   {
     id: "corte-tradicional",
-    name: "Corte Simples",
-    description: "Corte simples com tesoura e navalha",
     price: "R$ 30,00",
     duration: "20 min",
   },
   {
     id: "corte-degrade",
-    name: "Corte Degradê Navalhado",
-    description: "Corte degradê navalhado com tesoura",
     price: "R$ 60,00",
     duration: "45 min",
   },
   {
     id: "corte-barba",
-    name: "Corte + Barba",
-    description: "Corte e barba completo",
     price: "R$ 90,00",
     duration: "60 min",
   },
   {
     id: "barba-completa",
-    name: "Barba Completa",
-    description: "Aparar e modelar",
     price: "R$ 45,00",
     duration: "30 min",
   },
   {
     id: "bigode",
-    name: "Corte na Tesoura",
-    description: "Corte de cabelo todo na tesoura",
     price: "R$ 60,00",
     duration: "45 min",
   },
   {
     id: "corte-americano",
-    name: "Corte Americano",
-    description: "Corte com degradê só nos pezinhos",
     price: "R$ 50,00",
     duration: "45 min",
   },
   {
     id: "sobrancelha-na-navalha",
-    name: "Sobrancelha na Navalha",
-    description: "Design e aparar sobrancelhas",
     price: "R$ 20,00",
     duration: "15 min",
   },
   {
     id: "corte-low-fade",
-    name: "Corte Low Fade",
-    description: "Corte com degradê mais baixo",
     price: "R$ 60,00",
     duration: "50 min",
   },
   {
     id: "cera-nariz-ouvido",
-    name: "Cera Nariz e Ouvido",
-    description: "",
     price: "R$ 30,00",
     duration: "15 min",
   },
   {
     id: "corte-degrade-tradicional",
-    name: "Corte Degradê Tradicional",
-    description: "Corte degradê apartir do pente 1",
     price: "R$ 45,00",
     duration: "35 min",
   },
   {
     id: "corte-degrade-na-zero",
-    name: "Corte Degradê na Zero",
-    description: "Corte degradê apartir da zero",
     price: "R$ 50,00",
     duration: "35 min",
   },
   {
     id: "progressiva-relaxamento",
-    name: "Progresiva / Relaxamento",
-    description: "Alisamento dos fios",
     price: "R$ 100,00",
     duration: "50 min",
   },
   {
     id: "luzes",
-    name: "Luzes",
-    description: "",
     price: "R$ 150,00",
     duration: "1 hora 30 min",
   },
   {
     id: "platinado",
-    name: "Platinado",
-    description: "",
     price: "R$ 200,00",
     duration: "2 horas",
   },
   {
     id: "sobrancelha-na-pinca",
-    name: "Sobrancelha na pinça",
-    description: "",
     price: "R$ 30,00",
     duration: "15 min",
   },

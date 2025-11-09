@@ -1,0 +1,14 @@
+{
+  "buttons": {
+    "book": "Book",
+    "follow": "Follow on Instagram",
+    "bookAppointment": "Book Appointment",
+    "close": "Close"
+  },
+  "aria": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "changeLanguage": "Change language",
+    "toggleTheme": "Toggle theme"
+  }
+}

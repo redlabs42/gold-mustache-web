@@ -1,0 +1,78 @@
+{
+  "title": "Nossos Serviços",
+  "subtitle": "Tradição em Cada Corte",
+  "description": "Oferecemos uma gama completa de serviços especializados em cuidados masculinos, sempre com a qualidade e atenção aos detalhes que você merece.",
+  "featured": {
+    "badge": "Mais Popular",
+    "title": "Combo Completo",
+    "description": "Corte + Barba + Sobrancelha - O pacote completo para um visual impecável",
+    "save": "Economize",
+    "duration": "Aproximadamente 60 minutos",
+    "cta": "Agendar Combo Completo"
+  },
+  "labels": {
+    "book": "Agendar"
+  },
+  "items": {
+    "corte-tradicional": {
+      "name": "Corte Simples",
+      "description": "Corte simples com tesoura e navalha"
+    },
+    "corte-degrade": {
+      "name": "Corte Degradê Navalhado",
+      "description": "Corte degradê navalhado com tesoura"
+    },
+    "corte-barba": {
+      "name": "Corte + Barba",
+      "description": "Corte e barba completo"
+    },
+    "barba-completa": {
+      "name": "Barba Completa",
+      "description": "Aparar e modelar"
+    },
+    "bigode": {
+      "name": "Corte na Tesoura",
+      "description": "Corte de cabelo todo na tesoura"
+    },
+    "corte-americano": {
+      "name": "Corte Americano",
+      "description": "Corte com degradê só nos pezinhos"
+    },
+    "sobrancelha-na-navalha": {
+      "name": "Sobrancelha na Navalha",
+      "description": "Design e aparar sobrancelhas"
+    },
+    "corte-low-fade": {
+      "name": "Corte Low Fade",
+      "description": "Corte com degradê mais baixo"
+    },
+    "cera-nariz-ouvido": {
+      "name": "Cera Nariz e Ouvido",
+      "description": ""
+    },
+    "corte-degrade-tradicional": {
+      "name": "Corte Degradê Tradicional",
+      "description": "Corte degradê apartir do pente 1"
+    },
+    "corte-degrade-na-zero": {
+      "name": "Corte Degradê na Zero",
+      "description": "Corte degradê apartir da zero"
+    },
+    "progressiva-relaxamento": {
+      "name": "Progresiva / Relaxamento",
+      "description": "Alisamento dos fios"
+    },
+    "luzes": {
+      "name": "Luzes",
+      "description": ""
+    },
+    "platinado": {
+      "name": "Platinado",
+      "description": ""
+    },
+    "sobrancelha-na-pinca": {
+      "name": "Sobrancelha na pinça",
+      "description": ""
+    }
+  }
+}

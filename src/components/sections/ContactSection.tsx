@@ -20,16 +20,16 @@ import {
   Navigation,
   Phone,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function ContactSection() {
+  const t = useTranslations("contact");
   const handleBookingClick = () => {
     window.open(BRAND.booking.inbarberUrl, "_blank", "noopener,noreferrer");
   };
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent(
-      "Olá! Gostaria de agendar um horário na Gold Mustache Barbearia.",
-    );
+    const message = encodeURIComponent(t("whatsappMessage"));
     window.open(
       `https://wa.me/${BRAND.contact.whatsapp}?text=${message}`,
       "_blank",
@@ -37,9 +37,7 @@ export function ContactSection() {
   };
 
   const handleWhatsAppVitorClick = () => {
-    const message = encodeURIComponent(
-      "Olá! Gostaria de agendar um horário na Gold Mustache Barbearia.",
-    );
+    const message = encodeURIComponent(t("whatsappMessage"));
     window.open(
       `https://wa.me/${BRAND.contactVitor.whatsapp}?text=${message}`,
       "_blank",
@@ -47,9 +45,7 @@ export function ContactSection() {
   };
 
   const handleWhatsAppJoaoClick = () => {
-    const message = encodeURIComponent(
-      "Olá! Gostaria de agendar um horário na Gold Mustache Barbearia.",
-    );
+    const message = encodeURIComponent(t("whatsappMessage"));
     window.open(
       `https://wa.me/${BRAND.contactJoao.whatsapp}?text=${message}`,
       "_blank",
@@ -57,9 +53,7 @@ export function ContactSection() {
   };
 
   const handleWhatsAppDavidClick = () => {
-    const message = encodeURIComponent(
-      "Olá! Gostaria de agendar um horário na Gold Mustache Barbearia.",
-    );
+    const message = encodeURIComponent(t("whatsappMessage"));
     window.open(
       `https://wa.me/${BRAND.contactDavid.whatsapp}?text=${message}`,
       "_blank",
@@ -80,14 +74,13 @@ export function ContactSection() {
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4">
             <MapPin className="h-4 w-4 mr-2" />
-            <span>Contato & Localização</span>
+            <span>{t("title")}</span>
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Venha nos <span className="text-primary">Visitar</span>
+            {t("subtitle")}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Estamos localizados no coração de Itapema, prontos para oferecer o
-            melhor atendimento e cuidado com seu visual.
+            {t("description")}
           </p>
         </div>
 
@@ -98,9 +91,9 @@ export function ContactSection() {
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
                   <MapPin className="h-5 w-5 text-primary" />
-                  <span>Endereço</span>
+                  <span>{t("address.title")}</span>
                 </CardTitle>
-                <CardDescription>Nossa localização em Itapema</CardDescription>
+                <CardDescription>{t("address.description")}</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-foreground font-medium">
@@ -112,7 +105,7 @@ export function ContactSection() {
                   className="w-full cursor-pointer"
                 >
                   <Navigation className="h-4 w-4 mr-2" />
-                  Como Chegar
+                  {t("address.cta")}
                 </Button>
               </CardContent>
             </Card>
@@ -121,24 +114,32 @@ export function ContactSection() {
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
                   <Clock className="h-5 w-5 text-primary" />
-                  <span>Horário de Funcionamento</span>
+                  <span>{t("hours.title")}</span>
                 </CardTitle>
-                <CardDescription>Quando estamos abertos</CardDescription>
+                <CardDescription>{t("hours.description")}</CardDescription>
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Segunda a Sexta</span>
-                  <span className="font-medium">10h às 20h</span>
+                  <span className="text-muted-foreground">
+                    {t("hours.weekdays")}
+                  </span>
+                  <span className="font-medium">{t("hours.time")}</span>
                 </div>
                 <Separator />
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Sábado</span>
-                  <span className="font-medium">10h às 20h</span>
+                  <span className="text-muted-foreground">
+                    {t("hours.saturday")}
+                  </span>
+                  <span className="font-medium">{t("hours.time")}</span>
                 </div>
                 <Separator />
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Domingo</span>
-                  <span className="font-medium text-destructive">Fechado</span>
+                  <span className="text-muted-foreground">
+                    {t("hours.sunday")}
+                  </span>
+                  <span className="font-medium text-destructive">
+                    {t("hours.closed")}
+                  </span>
                 </div>
               </CardContent>
             </Card>
@@ -147,13 +148,13 @@ export function ContactSection() {
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
                   <Phone className="h-5 w-5 text-primary" />
-                  <span>Contato Direto Ygor Luan (proprietário)</span>
+                  <span>{t("phone.ownerYgor")}</span>
                 </CardTitle>
-                <CardDescription>Fale conosco</CardDescription>
+                <CardDescription>{t("phone.description")}</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-2">
-                  <p className="text-muted-foreground">Telefone</p>
+                  <p className="text-muted-foreground">{t("phone.label")}</p>
                   <p className="font-medium">{BRAND.contact.phone}</p>
                 </div>
                 <Button
@@ -162,7 +163,7 @@ export function ContactSection() {
                   variant="default"
                 >
                   <MessageSquare className="h-4 w-4 mr-2" />
-                  WhatsApp
+                  {t("phone.cta")}
                 </Button>
               </CardContent>
             </Card>
@@ -171,13 +172,13 @@ export function ContactSection() {
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
                   <Phone className="h-5 w-5 text-primary" />
-                  <span>Contato Direto Vitor Maronez (proprietário)</span>
+                  <span>{t("phone.ownerVitor")}</span>
                 </CardTitle>
-                <CardDescription>Fale conosco</CardDescription>
+                <CardDescription>{t("phone.description")}</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-2">
-                  <p className="text-muted-foreground">Telefone</p>
+                  <p className="text-muted-foreground">{t("phone.label")}</p>
                   <p className="font-medium">{BRAND.contactVitor.phone}</p>
                 </div>
                 <Button
@@ -186,7 +187,7 @@ export function ContactSection() {
                   variant="default"
                 >
                   <MessageSquare className="h-4 w-4 mr-2" />
-                  WhatsApp
+                  {t("phone.cta")}
                 </Button>
               </CardContent>
             </Card>
@@ -196,13 +197,13 @@ export function ContactSection() {
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
                     <Phone className="h-5 w-5 text-primary" />
-                    <span>Barbeiro: João Vitor</span>
+                    <span>{t("phone.barberJoao")}</span>
                   </CardTitle>
-                  <CardDescription>Fale conosco</CardDescription>
+                  <CardDescription>{t("phone.description")}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="space-y-2">
-                    <p className="text-muted-foreground">Telefone</p>
+                    <p className="text-muted-foreground">{t("phone.label")}</p>
                     <p className="font-medium">{BRAND.contactJoao.phone}</p>
                   </div>
                   <Button
@@ -211,7 +212,7 @@ export function ContactSection() {
                     variant="default"
                   >
                     <MessageSquare className="h-4 w-4 mr-2" />
-                    WhatsApp
+                    {t("phone.cta")}
                   </Button>
                 </CardContent>
               </Card>
@@ -220,13 +221,13 @@ export function ContactSection() {
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
                     <Phone className="h-5 w-5 text-primary" />
-                    <span>Barbeiro: David Trindade</span>
+                    <span>{t("phone.barberDavid")}</span>
                   </CardTitle>
-                  <CardDescription>Fale conosco</CardDescription>
+                  <CardDescription>{t("phone.description")}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="space-y-2">
-                    <p className="text-muted-foreground">Telefone</p>
+                    <p className="text-muted-foreground">{t("phone.label")}</p>
                     <p className="font-medium">{BRAND.contactDavid.phone}</p>
                   </div>
                   <Button
@@ -235,7 +236,7 @@ export function ContactSection() {
                     variant="default"
                   >
                     <MessageSquare className="h-4 w-4 mr-2" />
-                    WhatsApp
+                    {t("phone.cta")}
                   </Button>
                 </CardContent>
               </Card>
@@ -251,16 +252,15 @@ export function ContactSection() {
                     <MapPin className="h-12 w-12 text-primary mx-auto" />
                     <div>
                       <h3 className="text-lg font-semibold mb-2">
-                        Localização
+                        {t("map.title")}
                       </h3>
                       <p className="text-muted-foreground text-sm max-w-xs">
-                        Mapa interativo será carregado aqui com a localização
-                        exata da barbearia
+                        {t("map.description")}
                       </p>
                     </div>
                     <Button onClick={handleDirectionsClick} size="sm">
                       <Navigation className="h-4 w-4 mr-2" />
-                      Ver no Google Maps
+                      {t("map.cta")}
                     </Button>
                   </div>
                 </div>
@@ -276,8 +276,10 @@ export function ContactSection() {
               >
                 <Calendar className="h-5 w-5 mr-2" />
                 <div className="text-left">
-                  <div className="font-semibold">Agendar</div>
-                  <div className="text-xs opacity-90">Sistema Online</div>
+                  <div className="font-semibold">{t("cta.book")}</div>
+                  <div className="text-xs opacity-90">
+                    {t("cta.bookDescription")}
+                  </div>
                 </div>
               </Button>
 
@@ -299,10 +301,10 @@ export function ContactSection() {
 
             <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
               <CardHeader className="text-center">
-                <CardTitle className="text-xl">Siga-nos no Instagram</CardTitle>
-                <CardDescription>
-                  Acompanhe nossos trabalhos e novidades
-                </CardDescription>
+                <CardTitle className="text-xl">
+                  {t("instagram.title")}
+                </CardTitle>
+                <CardDescription>{t("instagram.description")}</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex flex-col space-y-2">

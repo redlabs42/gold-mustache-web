@@ -1,0 +1,78 @@
+{
+  "title": "Our Services",
+  "subtitle": "Tradition in Every Cut",
+  "description": "We offer a complete range of specialized men's grooming services, always with the quality and attention to detail you deserve.",
+  "featured": {
+    "badge": "Most Popular",
+    "title": "Complete Combo",
+    "description": "Haircut + Beard + Eyebrows - The complete package for an impeccable look",
+    "save": "Save",
+    "duration": "Approximately 60 minutes",
+    "cta": "Book Complete Combo"
+  },
+  "labels": {
+    "book": "Book"
+  },
+  "items": {
+    "corte-tradicional": {
+      "name": "Simple Haircut",
+      "description": "Simple haircut with scissors and razor"
+    },
+    "corte-degrade": {
+      "name": "Razor Fade Haircut",
+      "description": "Razor fade haircut with scissors"
+    },
+    "corte-barba": {
+      "name": "Haircut + Beard",
+      "description": "Complete haircut and beard"
+    },
+    "barba-completa": {
+      "name": "Full Beard",
+      "description": "Trim and shape"
+    },
+    "bigode": {
+      "name": "Scissor Cut",
+      "description": "Full haircut with scissors"
+    },
+    "corte-americano": {
+      "name": "American Cut",
+      "description": "Haircut with fade only on the sides"
+    },
+    "sobrancelha-na-navalha": {
+      "name": "Razor Eyebrows",
+      "description": "Design and trim eyebrows"
+    },
+    "corte-low-fade": {
+      "name": "Low Fade Cut",
+      "description": "Haircut with lower fade"
+    },
+    "cera-nariz-ouvido": {
+      "name": "Nose and Ear Wax",
+      "description": ""
+    },
+    "corte-degrade-tradicional": {
+      "name": "Traditional Fade Cut",
+      "description": "Fade haircut from clipper guard 1"
+    },
+    "corte-degrade-na-zero": {
+      "name": "Zero Fade Cut",
+      "description": "Fade haircut from zero"
+    },
+    "progressiva-relaxamento": {
+      "name": "Progressive / Relaxer",
+      "description": "Hair straightening"
+    },
+    "luzes": {
+      "name": "Highlights",
+      "description": ""
+    },
+    "platinado": {
+      "name": "Platinum",
+      "description": ""
+    },
+    "sobrancelha-na-pinca": {
+      "name": "Tweezed Eyebrows",
+      "description": ""
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "description": "Traditional barbershop in Itapema, offering quality services with over 6 years of experience in classic and modern men's haircuts.",
+  "sections": {
+    "contact": "Contact",
+    "quickLinks": "Quick Links"
+  },
+  "links": {
+    "services": "Our Services",
+    "instagram": "Instagram",
+    "contact": "Contact Us",
+    "book": "Book Appointment",
+    "barbershop": "Barbershop",
+    "store": "Store"
+  },
+  "copyright": "Gold Mustache Barbershop. All rights reserved."
+}

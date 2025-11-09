@@ -1,0 +1,45 @@
+{
+  "title": "Contacto y Ubicación",
+  "subtitle": "Ven a Visitarnos",
+  "description": "Estamos ubicados en el corazón de Itapema, listos para ofrecer la mejor atención y cuidado de tu imagen.",
+  "address": {
+    "title": "Dirección",
+    "description": "Nuestra ubicación en Itapema",
+    "cta": "Cómo Llegar"
+  },
+  "hours": {
+    "title": "Horario de Atención",
+    "description": "Cuándo estamos abiertos",
+    "weekdays": "Lunes a Viernes",
+    "saturday": "Sábado",
+    "sunday": "Domingo",
+    "closed": "Cerrado",
+    "time": "10h a 20h"
+  },
+  "phone": {
+    "title": "Contacto Directo",
+    "ownerYgor": "Contacto Directo Ygor Luan (propietario)",
+    "ownerVitor": "Contacto Directo Vitor Maronez (propietario)",
+    "barberJoao": "Barbero: João Vitor",
+    "barberDavid": "Barbero: David Trindade",
+    "description": "Habla con nosotros",
+    "label": "Teléfono",
+    "cta": "WhatsApp"
+  },
+  "map": {
+    "title": "Ubicación",
+    "description": "Mapa interactivo se cargará aquí con la ubicación exacta de la barbería",
+    "cta": "Ver en Google Maps"
+  },
+  "cta": {
+    "book": "Reservar",
+    "bookDescription": "Sistema Online",
+    "whatsapp": "WhatsApp",
+    "whatsappDescription": "Contacto Directo"
+  },
+  "instagram": {
+    "title": "Síguenos en Instagram",
+    "description": "Acompaña nuestros trabajos y novedades"
+  },
+  "whatsappMessage": "¡Hola! Me gustaría reservar una cita en Gold Mustache Barbería."
+}

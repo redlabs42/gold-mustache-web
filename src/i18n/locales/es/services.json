@@ -1,0 +1,78 @@
+{
+  "title": "Nuestros Servicios",
+  "subtitle": "Tradición en Cada Corte",
+  "description": "Ofrecemos una gama completa de servicios especializados en cuidados masculinos, siempre con la calidad y atención a los detalles que mereces.",
+  "featured": {
+    "badge": "Más Popular",
+    "title": "Combo Completo",
+    "description": "Corte + Barba + Cejas - El paquete completo para un look impecable",
+    "save": "Ahorra",
+    "duration": "Aproximadamente 60 minutos",
+    "cta": "Reservar Combo Completo"
+  },
+  "labels": {
+    "book": "Reservar"
+  },
+  "items": {
+    "corte-tradicional": {
+      "name": "Corte Simple",
+      "description": "Corte simple con tijera y navaja"
+    },
+    "corte-degrade": {
+      "name": "Corte Degradado con Navaja",
+      "description": "Corte degradado con navaja y tijera"
+    },
+    "corte-barba": {
+      "name": "Corte + Barba",
+      "description": "Corte y barba completo"
+    },
+    "barba-completa": {
+      "name": "Barba Completa",
+      "description": "Recortar y modelar"
+    },
+    "bigode": {
+      "name": "Corte con Tijera",
+      "description": "Corte de cabello todo con tijera"
+    },
+    "corte-americano": {
+      "name": "Corte Americano",
+      "description": "Corte con degradado solo en los lados"
+    },
+    "sobrancelha-na-navalha": {
+      "name": "Cejas con Navaja",
+      "description": "Diseño y recorte de cejas"
+    },
+    "corte-low-fade": {
+      "name": "Corte Low Fade",
+      "description": "Corte con degradado más bajo"
+    },
+    "cera-nariz-ouvido": {
+      "name": "Cera Nariz y Oído",
+      "description": ""
+    },
+    "corte-degrade-tradicional": {
+      "name": "Corte Degradado Tradicional",
+      "description": "Corte degradado desde el peine 1"
+    },
+    "corte-degrade-na-zero": {
+      "name": "Corte Degradado a Cero",
+      "description": "Corte degradado desde cero"
+    },
+    "progressiva-relaxamento": {
+      "name": "Progresiva / Relajamiento",
+      "description": "Alisado del cabello"
+    },
+    "luzes": {
+      "name": "Mechas",
+      "description": ""
+    },
+    "platinado": {
+      "name": "Platinado",
+      "description": ""
+    },
+    "sobrancelha-na-pinca": {
+      "name": "Cejas con Pinza",
+      "description": ""
+    }
+  }
+}

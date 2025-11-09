@@ -5,8 +5,12 @@ import { Button } from "@/components/ui/button";
 import { BRAND } from "@/constants/brand";
 import { Calendar, Clock, MapPin, Star } from "lucide-react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export function HeroSection() {
+  const t = useTranslations("hero");
+  const tBrand = useTranslations("brand");
+
   const handleBookingClick = () => {
     window.open(BRAND.booking.inbarberUrl, "_blank", "noopener,noreferrer");
   };
@@ -22,15 +26,15 @@ export function HeroSection() {
           <div className="flex flex-wrap justify-center gap-3">
             <Badge variant="default" className="text-sm px-4 py-2">
               <MapPin className="h-4 w-4 mr-2" />
-              Itapema, SC
+              {t("badges.location")}
             </Badge>
             <Badge variant="default" className="text-sm px-4 py-2">
               <Clock className="h-4 w-4 mr-2" />
-              Segunda a Sábado
+              {t("badges.schedule")}
             </Badge>
             <Badge variant="default" className="text-sm px-4 py-2">
               <Star className="h-4 w-4 mr-2 fill-primary text-primary" />
-              +6 anos de experiência
+              {t("badges.experience")}
             </Badge>
           </div>
 
@@ -52,16 +56,14 @@ export function HeroSection() {
             />
             {/* </div> */}
             <p className="text-xl md:text-2xl text-muted-foreground font-medium sr-only">
-              {BRAND.tagline}
+              {tBrand("tagline")}
             </p>
           </div>
 
           {/* Description */}
           <div className="max-w-2xl mx-auto">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Mais de 6 anos oferecendo o melhor em cortes masculinos clássicos
-              e modernos. Tradição, qualidade e estilo em cada atendimento na
-              melhor barbearia de Itapema.
+              {t("description")}
             </p>
           </div>
 
@@ -73,7 +75,7 @@ export function HeroSection() {
               className="text-lg px-8 py-6 h-auto min-w-[200px] font-semibold"
             >
               <Calendar className="h-5 w-5" />
-              Agendar Horário
+              {t("cta.book")}
             </Button>
             <Button
               variant="outline"
@@ -81,7 +83,7 @@ export function HeroSection() {
               asChild
               className="text-lg px-8 py-6 h-auto min-w-[200px]"
             >
-              <a href="#servicos">Ver Serviços</a>
+              <a href="#servicos">{t("cta.services")}</a>
             </Button>
           </div>
 
@@ -90,19 +92,19 @@ export function HeroSection() {
             <div className="text-center space-y-2">
               <div className="text-3xl font-bold text-primary">1000+</div>
               <div className="text-sm text-muted-foreground">
-                Clientes Satisfeitos
+                {t("stats.clients")}
               </div>
             </div>
             <div className="text-center space-y-2">
               <div className="text-3xl font-bold text-primary">6+</div>
               <div className="text-sm text-muted-foreground">
-                Anos de Experiência
+                {t("stats.experience")}
               </div>
             </div>
             <div className="text-center space-y-2">
               <div className="text-3xl font-bold text-primary">5★</div>
               <div className="text-sm text-muted-foreground">
-                Avaliação dos Clientes
+                {t("stats.rating")}
               </div>
             </div>
           </div>

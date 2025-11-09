@@ -20,6 +20,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { BRAND, SERVICES } from "@/constants/brand";
 import { Calendar, Clock, Scissors, Star } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const serviceIcons = {
   "corte-tradicional": Scissors,
@@ -40,6 +41,8 @@ const serviceIcons = {
 };
 
 export function ServicesSection() {
+  const t = useTranslations("services");
+
   const handleBookingClick = () => {
     window.open(BRAND.booking.inbarberUrl, "_blank", "noopener,noreferrer");
   };
@@ -50,15 +53,13 @@ export function ServicesSection() {
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4">
             <Scissors className="h-4 w-4 mr-2" />
-            Nossos Serviços
+            {t("title")}
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Tradição em <span className="text-primary">Cada Corte</span>
+            {t("subtitle")}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Oferecemos uma gama completa de serviços especializados em cuidados
-            masculinos, sempre com a qualidade e atenção aos detalhes que você
-            merece.
+            {t("description")}
           </p>
         </div>
 
@@ -68,14 +69,13 @@ export function ServicesSection() {
             <CardHeader className="text-center pb-4">
               <Badge variant="default" className="mb-2 w-fit mx-auto">
                 <Star className="h-4 w-4 mr-2" />
-                Mais Popular
+                {t("featured.badge")}
               </Badge>
               <CardTitle className="text-2xl md:text-3xl">
-                Combo Completo
+                {t("featured.title")}
               </CardTitle>
               <CardDescription className="text-lg">
-                Corte + Barba + Sobrancelha - O pacote completo para um visual
-                impecável
+                {t("featured.description")}
               </CardDescription>
             </CardHeader>
 
@@ -85,11 +85,11 @@ export function ServicesSection() {
                   R$ 115,00
                 </div>
                 <div className="text-3xl font-bold text-primary">R$ 100,00</div>
-                <Badge variant="destructive">Economize R$ 15</Badge>
+                <Badge variant="destructive">{t("featured.save")} R$ 15</Badge>
               </div>
               <div className="flex items-center justify-center space-x-2 text-muted-foreground mb-6">
                 <Clock className="h-4 w-4" />
-                <span>Aproximadamente 60 minutos</span>
+                <span>{t("featured.duration")}</span>
               </div>
             </CardContent>
 
@@ -100,7 +100,7 @@ export function ServicesSection() {
                 className="w-full max-w-xs mx-auto cursor-pointer"
               >
                 <Calendar className="h-5 w-5 mr-2" />
-                Agendar Combo Completo
+                {t("featured.cta")}
               </Button>
             </CardFooter>
           </Card>
@@ -132,10 +132,10 @@ export function ServicesSection() {
                           <IconComponent className="h-8 w-8 text-primary" />
                         </div>
                         <CardTitle className="text-xl">
-                          {service.name}
+                          {t(`items.${service.id}.name`)}
                         </CardTitle>
                         <CardDescription className="text-base">
-                          {service.description}
+                          {t(`items.${service.id}.description`)}
                         </CardDescription>
                       </CardHeader>
 
@@ -161,7 +161,7 @@ export function ServicesSection() {
                           variant="default"
                         >
                           <Calendar className="h-4 w-4 mr-2" />
-                          Agendar {service.name}
+                          {t("labels.book")} {t(`items.${service.id}.name`)}
                         </Button>
                       </CardFooter>
                     </Card>
@@ -190,9 +190,11 @@ export function ServicesSection() {
                   <div className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <IconComponent className="h-8 w-8 text-primary" />
                   </div>
-                  <CardTitle className="text-xl">{service.name}</CardTitle>
+                  <CardTitle className="text-xl">
+                    {t(`items.${service.id}.name`)}
+                  </CardTitle>
                   <CardDescription className="text-base">
-                    {service.description}
+                    {t(`items.${service.id}.description`)}
                   </CardDescription>
                 </CardHeader>
 
@@ -218,7 +220,7 @@ export function ServicesSection() {
                     variant="default"
                   >
                     <Calendar className="h-4 w-4 mr-2" />
-                    Agendar {service.name}
+                    {t("labels.book")} {t(`items.${service.id}.name`)}
                   </Button>
                 </CardFooter>
               </Card>

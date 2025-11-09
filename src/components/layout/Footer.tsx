@@ -5,9 +5,12 @@ import { BRAND } from "@/constants/brand";
 import { Calendar, Clock, Instagram, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const t = useTranslations("footer");
+  const tBrand = useTranslations("brand");
 
   const handleBookingClick = () => {
     window.open(BRAND.booking.inbarberUrl, "_blank", "noopener,noreferrer");
@@ -33,13 +36,13 @@ export function Footer() {
                 <h3 className="text-xl font-bold text-primary font-playfair">
                   Gold Mustache
                 </h3>
-                <p className="text-sm text-muted-foreground">{BRAND.tagline}</p>
+                <p className="text-sm text-muted-foreground">
+                  {tBrand("tagline")}
+                </p>
               </div>
             </div>
             <p className="text-muted-foreground mb-6 max-w-md">
-              Barbearia tradicional em Itapema, oferecendo serviços de qualidade
-              com mais de 6 anos de experiência em cortes masculinos clássicos e
-              modernos.
+              {t("description")}
             </p>
             <div className="flex space-x-3">
               <Button variant="outline" size="sm" asChild>
@@ -50,7 +53,7 @@ export function Footer() {
                   className="flex items-center space-x-2 border-primary/30 bg-background text-foreground hover:bg-primary/10 hover:text-primary hover:border-primary/50"
                 >
                   <Instagram className="h-4 w-4" />
-                  <span>Barbearia</span>
+                  <span>{t("links.barbershop")}</span>
                 </Link>
               </Button>
               <Button variant="outline" size="sm" asChild>
@@ -61,7 +64,7 @@ export function Footer() {
                   className="flex items-center space-x-2 border-primary/30 bg-background text-foreground hover:bg-primary/10 hover:text-primary hover:border-primary/50"
                 >
                   <Instagram className="h-4 w-4" />
-                  <span>Loja</span>
+                  <span>{t("links.store")}</span>
                 </Link>
               </Button>
             </div>
@@ -69,7 +72,9 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-semibold mb-4 text-primary">Contato</h4>
+            <h4 className="font-semibold mb-4 text-primary">
+              {t("sections.contact")}
+            </h4>
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
@@ -86,9 +91,9 @@ export function Footer() {
               <div className="flex items-center space-x-2">
                 <Clock className="h-4 w-4 text-primary flex-shrink-0" />
                 <div className="text-muted-foreground">
-                  <div>{BRAND.hours.weekdays}</div>
-                  <div>{BRAND.hours.saturday}</div>
-                  <div>{BRAND.hours.sunday}</div>
+                  <div>Segunda a Sexta: 10h às 20h</div>
+                  <div>Sábado: 10h às 20h</div>
+                  <div>Domingo: Fechado</div>
                 </div>
               </div>
             </div>
@@ -96,25 +101,27 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4 text-primary">Links Rápidos</h4>
+            <h4 className="font-semibold mb-4 text-primary">
+              {t("sections.quickLinks")}
+            </h4>
             <div className="space-y-3 text-sm">
               <Link
                 href="#servicos"
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
-                Nossos Serviços
+                {t("links.services")}
               </Link>
               <Link
                 href="#instagram"
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
-                Instagram
+                {t("links.instagram")}
               </Link>
               <Link
                 href="#contato"
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
-                Fale Conosco
+                {t("links.contact")}
               </Link>
               <Button
                 variant="link"
@@ -123,7 +130,7 @@ export function Footer() {
                 className="h-auto p-0 text-primary hover:text-primary/80 text-sm font-normal"
               >
                 <Calendar className="h-4 w-4 mr-2" />
-                Agendar Horário
+                {t("links.book")}
               </Button>
             </div>
           </div>
@@ -132,10 +139,9 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
           <p>
-            © {currentYear} Gold Mustache Barbearia. Todos os direitos
-            reservados.
+            © {currentYear} {t("copyright")}
           </p>
-          <p className="mt-2 md:mt-0">{BRAND.location}</p>
+          <p className="mt-2 md:mt-0">{tBrand("location")}</p>
         </div>
       </div>
     </footer>

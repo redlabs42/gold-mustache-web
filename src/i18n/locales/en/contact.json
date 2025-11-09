@@ -1,0 +1,45 @@
+{
+  "title": "Contact & Location",
+  "subtitle": "Come Visit Us",
+  "description": "We are located in the heart of Itapema, ready to offer the best service and care for your look.",
+  "address": {
+    "title": "Address",
+    "description": "Our location in Itapema",
+    "cta": "Get Directions"
+  },
+  "hours": {
+    "title": "Business Hours",
+    "description": "When we're open",
+    "weekdays": "Monday to Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "closed": "Closed",
+    "time": "10am to 8pm"
+  },
+  "phone": {
+    "title": "Direct Contact",
+    "ownerYgor": "Direct Contact Ygor Luan (owner)",
+    "ownerVitor": "Direct Contact Vitor Maronez (owner)",
+    "barberJoao": "Barber: João Vitor",
+    "barberDavid": "Barber: David Trindade",
+    "description": "Talk to us",
+    "label": "Phone",
+    "cta": "WhatsApp"
+  },
+  "map": {
+    "title": "Location",
+    "description": "Interactive map will be loaded here with the exact location of the barbershop",
+    "cta": "View on Google Maps"
+  },
+  "cta": {
+    "book": "Book",
+    "bookDescription": "Online System",
+    "whatsapp": "WhatsApp",
+    "whatsappDescription": "Direct Contact"
+  },
+  "instagram": {
+    "title": "Follow us on Instagram",
+    "description": "Check out our work and news"
+  },
+  "whatsappMessage": "Hello! I would like to book an appointment at Gold Mustache Barbershop."
+}

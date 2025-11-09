@@ -1,0 +1,17 @@
+{
+  "badges": {
+    "location": "Itapema, SC",
+    "schedule": "Segunda a Sábado",
+    "experience": "+6 anos de experiência"
+  },
+  "description": "Mais de 6 anos oferecendo o melhor em cortes masculinos clássicos e modernos. Tradição, qualidade e estilo em cada atendimento na melhor barbearia de Itapema.",
+  "cta": {
+    "book": "Agendar Horário",
+    "services": "Ver Serviços"
+  },
+  "stats": {
+    "clients": "Clientes Satisfeitos",
+    "experience": "Anos de Experiência",
+    "rating": "Avaliação dos Clientes"
+  }
+}

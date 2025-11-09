@@ -1,0 +1,14 @@
+{
+  "buttons": {
+    "book": "Agendar",
+    "follow": "Seguir no Instagram",
+    "bookAppointment": "Agendar Horário",
+    "close": "Fechar"
+  },
+  "aria": {
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "changeLanguage": "Alterar idioma",
+    "toggleTheme": "Alternar tema"
+  }
+}

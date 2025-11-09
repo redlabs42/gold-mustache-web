@@ -6,7 +6,8 @@ export function SchemaMarkup() {
     "@type": "LocalBusiness",
     "@id": "https://www.goldmustachebarbearia.com.br/#organization",
     name: BRAND.name,
-    description: `${BRAND.tagline} - Barbearia tradicional em Itapema-SC com mais de 6 anos de experiência oferecendo cortes masculinos clássicos e modernos, barba completa e degradê navalhado.`,
+    description:
+      "Tradição e Estilo Masculino - Barbearia tradicional em Itapema-SC com mais de 6 anos de experiência oferecendo cortes masculinos clássicos e modernos, barba completa e degradê navalhado.",
     url: "https://www.goldmustachebarbearia.com.br",
     telephone: [
       BRAND.contact.phone,
@@ -92,8 +93,8 @@ export function SchemaMarkup() {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: service.name,
-          description: service.description || service.name,
+          name: service.id,
+          description: service.id,
         },
         price: service.price.replace("R$ ", "").replace(",", "."),
         priceCurrency: "BRL",
@@ -124,7 +125,8 @@ export function SchemaMarkup() {
     ],
     sameAs: [BRAND.instagram.mainUrl, BRAND.instagram.storeUrl],
     foundingDate: "2018",
-    description: `${BRAND.tagline} - Barbearia tradicional especializada em cortes masculinos`,
+    description:
+      "Tradição e Estilo Masculino - Barbearia tradicional especializada em cortes masculinos",
   };
 
   const breadcrumbSchema = {
@@ -146,7 +148,7 @@ export function SchemaMarkup() {
     "@id": "https://www.goldmustachebarbearia.com.br/#website",
     url: "https://www.goldmustachebarbearia.com.br",
     name: BRAND.name,
-    description: `${BRAND.tagline} - Site oficial da barbearia`,
+    description: "Tradição e Estilo Masculino - Site oficial da barbearia",
     publisher: {
       "@id": "https://www.goldmustachebarbearia.com.br/#organization",
     },

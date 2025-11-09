@@ -1,0 +1,16 @@
+{
+  "description": "Barbería tradicional en Itapema, ofreciendo servicios de calidad con más de 6 años de experiencia en cortes masculinos clásicos y modernos.",
+  "sections": {
+    "contact": "Contacto",
+    "quickLinks": "Enlaces Rápidos"
+  },
+  "links": {
+    "services": "Nuestros Servicios",
+    "instagram": "Instagram",
+    "contact": "Contáctanos",
+    "book": "Reservar Cita",
+    "barbershop": "Barbería",
+    "store": "Tienda"
+  },
+  "copyright": "Gold Mustache Barbería. Todos los derechos reservados."
+}
