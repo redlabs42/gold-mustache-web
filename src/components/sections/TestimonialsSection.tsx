@@ -21,10 +21,10 @@ import { useTranslations } from "next-intl";
 export function TestimonialsSection() {
   const t = useTranslations("testimonials");
 
-  const renderStars = (rating: number) => {
+  const renderStars = (rating: number, id?: string) => {
     return Array.from({ length: 5 }).map((_, index) => (
       <Star
-        key={`star-${index}`}
+        key={`star-${id || "summary"}-${index}`}
         className={`h-4 w-4 ${
           index < rating
             ? "fill-yellow-500 text-yellow-500"
@@ -68,7 +68,7 @@ export function TestimonialsSection() {
                   <Quote className="h-8 w-8 text-primary/20" />
                 </div>
                 <div className="flex gap-1">
-                  {renderStars(testimonial.rating)}
+                  {renderStars(testimonial.rating, testimonial.id)}
                 </div>
               </CardHeader>
               <CardContent>
@@ -106,7 +106,7 @@ export function TestimonialsSection() {
                         <Quote className="h-8 w-8 text-primary/20" />
                       </div>
                       <div className="flex gap-1">
-                        {renderStars(testimonial.rating)}
+                        {renderStars(testimonial.rating, testimonial.id)}
                       </div>
                     </CardHeader>
                     <CardContent>
