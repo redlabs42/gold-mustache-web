@@ -4,6 +4,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { InstagramSection } from "@/components/sections/InstagramSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { SponsorsSection } from "@/components/sections/SponsorsSection";
+import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <InstagramSection />
+      <TestimonialsSection />
       <EventsSection />
       <SponsorsSection />
       <ContactSection />
