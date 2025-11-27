@@ -25,6 +25,12 @@ export const BRAND = {
     // email: 'contato@goldmustache.com', // TODO: Add real email
     address:
       "R. 115, 79 - Centro, Itapema - SC, 88220-000 - Gold Mustache Barbearia",
+    coordinates: {
+      lat: -27.0923025919406,
+      lng: -48.611896766062245,
+    },
+    googleMapsUrl:
+      "https://www.google.com/maps/place/R.+115,+79+-+Centro,+Itapema+-+SC,+88220-000",
   },
 
   contactVitor: {

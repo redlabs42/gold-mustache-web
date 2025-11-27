@@ -1,5 +1,6 @@
 "use client";
 
+import { GoogleMap } from "@/components/custom/GoogleMap";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -243,26 +244,12 @@ export function ContactSection() {
             </div>
           </div>
 
-          {/* Mapa Placeholder e Ações */}
+          {/* Mapa do Google e Ações */}
           <div className="space-y-6">
             <Card className="overflow-hidden">
               <CardContent className="p-0">
-                <div className="aspect-[4/3] bg-gradient-to-br from-muted to-muted-foreground/20 flex items-center justify-center">
-                  <div className="text-center space-y-4">
-                    <MapPin className="h-12 w-12 text-primary mx-auto" />
-                    <div>
-                      <h3 className="text-lg font-semibold mb-2">
-                        {t("map.title")}
-                      </h3>
-                      <p className="text-muted-foreground text-sm max-w-xs">
-                        {t("map.description")}
-                      </p>
-                    </div>
-                    <Button onClick={handleDirectionsClick} size="sm">
-                      <Navigation className="h-4 w-4 mr-2" />
-                      {t("map.cta")}
-                    </Button>
-                  </div>
+                <div className="aspect-[4/3]">
+                  <GoogleMap />
                 </div>
               </CardContent>
             </Card>
