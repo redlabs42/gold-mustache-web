@@ -1,0 +1,57 @@
+{
+  "badge": "Perguntas Frequentes",
+  "title": "Dúvidas? Temos as Respostas",
+  "description": "Encontre respostas rápidas para as perguntas mais comuns sobre nossos serviços",
+  "items": [
+    {
+      "id": "scheduling-1",
+      "question": "Como faço para agendar um horário?",
+      "answer": "Você pode agendar através do nosso app Inbarber ou pelo WhatsApp. Recomendamos agendar com antecedência para garantir o horário de sua preferência, especialmente aos finais de semana."
+    },
+    {
+      "id": "scheduling-2",
+      "question": "Posso agendar para o mesmo dia?",
+      "answer": "Sim! Aceitamos agendamentos para o mesmo dia, sujeito à disponibilidade. Entre em contato pelo WhatsApp para verificar os horários disponíveis."
+    },
+    {
+      "id": "payment-1",
+      "question": "Quais formas de pagamento vocês aceitam?",
+      "answer": "Aceitamos dinheiro, cartões de débito e crédito (Visa, Mastercard, Elo), e PIX. Todas as formas de pagamento são processadas de forma segura."
+    },
+    {
+      "id": "payment-2",
+      "question": "Preciso pagar antecipado?",
+      "answer": "Não é necessário pagamento antecipado. O pagamento é realizado após o serviço ser concluído, no momento da sua saída."
+    },
+    {
+      "id": "cancellation-1",
+      "question": "Como faço para cancelar ou remarcar meu horário?",
+      "answer": "Para cancelar ou remarcar, entre em contato conosco pelo WhatsApp com pelo menos 2 horas de antecedência. Isso nos ajuda a disponibilizar o horário para outros clientes."
+    },
+    {
+      "id": "cancellation-2",
+      "question": "Existe taxa de cancelamento?",
+      "answer": "Não cobramos taxa de cancelamento, desde que você avise com antecedência mínima de 2 horas. Cancelamentos sem aviso prévio podem afetar futuros agendamentos."
+    },
+    {
+      "id": "services-1",
+      "question": "Qual é o serviço mais popular?",
+      "answer": "Nosso Combo Completo (Corte + Barba + Sobrancelha) é o mais procurado! Ele oferece um visual completo e impecável, com duração aproximada de 60 minutos."
+    },
+    {
+      "id": "services-2",
+      "question": "Quanto tempo dura cada serviço?",
+      "answer": "Um corte simples leva cerca de 30 minutos, barba completa 20 minutos, e o combo completo aproximadamente 60 minutos. Os tempos podem variar conforme a complexidade do serviço."
+    },
+    {
+      "id": "services-3",
+      "question": "Vocês atendem crianças?",
+      "answer": "Sim! Atendemos clientes de todas as idades. Temos experiência com cortes infantis e criamos um ambiente acolhedor para os pequenos."
+    },
+    {
+      "id": "services-4",
+      "question": "Preciso levar alguma foto de referência?",
+      "answer": "Não é obrigatório, mas é muito útil! Se você tem uma foto do corte ou estilo que deseja, traga no seu celular. Isso ajuda nossos profissionais a entenderem exatamente o que você procura."
+    }
+  ]
+}

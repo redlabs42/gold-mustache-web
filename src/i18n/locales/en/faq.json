@@ -1,0 +1,57 @@
+{
+  "badge": "Frequently Asked Questions",
+  "title": "Questions? We Have Answers",
+  "description": "Find quick answers to the most common questions about our services",
+  "items": [
+    {
+      "id": "scheduling-1",
+      "question": "How do I schedule an appointment?",
+      "answer": "You can schedule through our Inbarber app or via WhatsApp. We recommend booking in advance to secure your preferred time, especially on weekends."
+    },
+    {
+      "id": "scheduling-2",
+      "question": "Can I book for the same day?",
+      "answer": "Yes! We accept same-day appointments, subject to availability. Contact us via WhatsApp to check available time slots."
+    },
+    {
+      "id": "payment-1",
+      "question": "What payment methods do you accept?",
+      "answer": "We accept cash, debit and credit cards (Visa, Mastercard, Elo), and PIX. All payment methods are processed securely."
+    },
+    {
+      "id": "payment-2",
+      "question": "Do I need to pay in advance?",
+      "answer": "No advance payment is required. Payment is made after the service is completed, when you check out."
+    },
+    {
+      "id": "cancellation-1",
+      "question": "How do I cancel or reschedule my appointment?",
+      "answer": "To cancel or reschedule, contact us via WhatsApp at least 2 hours in advance. This helps us make the time slot available for other clients."
+    },
+    {
+      "id": "cancellation-2",
+      "question": "Is there a cancellation fee?",
+      "answer": "We don't charge a cancellation fee, as long as you notify us at least 2 hours in advance. Cancellations without notice may affect future bookings."
+    },
+    {
+      "id": "services-1",
+      "question": "What is your most popular service?",
+      "answer": "Our Complete Combo (Haircut + Beard + Eyebrows) is the most requested! It offers a complete and impeccable look, lasting approximately 60 minutes."
+    },
+    {
+      "id": "services-2",
+      "question": "How long does each service take?",
+      "answer": "A simple haircut takes about 30 minutes, a full beard trim 20 minutes, and the complete combo approximately 60 minutes. Times may vary depending on service complexity."
+    },
+    {
+      "id": "services-3",
+      "question": "Do you serve children?",
+      "answer": "Yes! We serve clients of all ages. We have experience with children's haircuts and create a welcoming environment for the little ones."
+    },
+    {
+      "id": "services-4",
+      "question": "Should I bring a reference photo?",
+      "answer": "It's not mandatory, but it's very helpful! If you have a photo of the haircut or style you want, bring it on your phone. This helps our professionals understand exactly what you're looking for."
+    }
+  ]
+}

@@ -47,18 +47,24 @@
 :root {
   --radius: 0.625rem;
   /* Gold Mustache Brand Colors */
-  --background: oklch(0.98 0.01 85); /* Warm off-white */
-  --foreground: oklch(0.15 0.02 85); /* Rich dark brown */
+  --background: oklch(0.98 0.01 85);
+  /* Warm off-white */
+  --foreground: oklch(0.15 0.02 85);
+  /* Rich dark brown */
   --card: oklch(0.99 0.005 85);
   --card-foreground: oklch(0.15 0.02 85);
   --popover: oklch(0.99 0.005 85);
   --popover-foreground: oklch(0.15 0.02 85);
   /* Primary: Gold theme for CTAs and highlights */
-  --primary: oklch(0.65 0.15 85); /* Rich gold */
-  --primary-foreground: oklch(0.12 0.02 85); /* Dark text on gold */
+  --primary: oklch(0.65 0.15 85);
+  /* Rich gold */
+  --primary-foreground: oklch(0.12 0.02 85);
+  /* Dark text on gold */
   /* Secondary: Elegant dark for premium feel */
-  --secondary: oklch(0.12 0.02 85); /* Premium dark */
-  --secondary-foreground: oklch(0.95 0.01 85); /* Light text */
+  --secondary: oklch(0.12 0.02 85);
+  /* Premium dark */
+  --secondary-foreground: oklch(0.95 0.01 85);
+  /* Light text */
   --muted: oklch(0.94 0.008 85);
   --muted-foreground: oklch(0.45 0.01 85);
   /* Accent: Subtle gold accent */
@@ -67,12 +73,18 @@
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.88 0.01 85);
   --input: oklch(0.96 0.005 85);
-  --ring: oklch(0.65 0.15 85); /* Gold focus ring */
-  --chart-1: oklch(0.65 0.15 85); /* Gold */
-  --chart-2: oklch(0.25 0.02 85); /* Dark */
-  --chart-3: oklch(0.45 0.08 85); /* Mid tone */
-  --chart-4: oklch(0.75 0.12 85); /* Light gold */
-  --chart-5: oklch(0.35 0.05 85); /* Dark accent */
+  --ring: oklch(0.65 0.15 85);
+  /* Gold focus ring */
+  --chart-1: oklch(0.65 0.15 85);
+  /* Gold */
+  --chart-2: oklch(0.25 0.02 85);
+  /* Dark */
+  --chart-3: oklch(0.45 0.08 85);
+  /* Mid tone */
+  --chart-4: oklch(0.75 0.12 85);
+  /* Light gold */
+  --chart-5: oklch(0.35 0.05 85);
+  /* Dark accent */
   --sidebar: oklch(0.98 0.01 85);
   --sidebar-foreground: oklch(0.15 0.02 85);
   --sidebar-primary: oklch(0.65 0.15 85);
@@ -85,15 +97,19 @@
 
 .dark {
   /* Gold Mustache Dark Mode - Premium barbershop feel */
-  --background: oklch(0.08 0.01 85); /* Rich dark background */
-  --foreground: oklch(0.92 0.01 85); /* Warm light text */
+  --background: oklch(0.08 0.01 85);
+  /* Rich dark background */
+  --foreground: oklch(0.92 0.01 85);
+  /* Warm light text */
   --card: oklch(0.12 0.02 85);
   --card-foreground: oklch(0.92 0.01 85);
   --popover: oklch(0.12 0.02 85);
   --popover-foreground: oklch(0.92 0.01 85);
   /* Primary: Bright gold for dark mode */
-  --primary: oklch(0.75 0.18 85); /* Bright gold */
-  --primary-foreground: oklch(0.08 0.01 85); /* Dark text */
+  --primary: oklch(0.75 0.18 85);
+  /* Bright gold */
+  --primary-foreground: oklch(0.08 0.01 85);
+  /* Dark text */
   --secondary: oklch(0.18 0.02 85);
   --secondary-foreground: oklch(0.92 0.01 85);
   --muted: oklch(0.15 0.02 85);
@@ -103,12 +119,18 @@
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(0.25 0.02 85);
   --input: oklch(0.16 0.02 85);
-  --ring: oklch(0.75 0.18 85); /* Gold focus ring */
-  --chart-1: oklch(0.75 0.18 85); /* Gold */
-  --chart-2: oklch(0.45 0.02 85); /* Mid tone */
-  --chart-3: oklch(0.65 0.08 85); /* Light accent */
-  --chart-4: oklch(0.85 0.12 85); /* Light gold */
-  --chart-5: oklch(0.35 0.05 85); /* Dark accent */
+  --ring: oklch(0.75 0.18 85);
+  /* Gold focus ring */
+  --chart-1: oklch(0.75 0.18 85);
+  /* Gold */
+  --chart-2: oklch(0.45 0.02 85);
+  /* Mid tone */
+  --chart-3: oklch(0.65 0.08 85);
+  /* Light accent */
+  --chart-4: oklch(0.85 0.12 85);
+  /* Light gold */
+  --chart-5: oklch(0.35 0.05 85);
+  /* Dark accent */
   --sidebar: oklch(0.08 0.01 85);
   --sidebar-foreground: oklch(0.92 0.01 85);
   --sidebar-primary: oklch(0.75 0.18 85);
@@ -123,7 +145,38 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+
+    to {
+      height: 0;
+    }
+  }
+
+  .animate-accordion-down {
+    animation: accordion-down 0.2s ease-out;
+  }
+
+  .animate-accordion-up {
+    animation: accordion-up 0.2s ease-out;
   }
 }

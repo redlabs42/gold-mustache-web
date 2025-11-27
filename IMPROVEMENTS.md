@@ -14,7 +14,7 @@
   - Card de resumo com média 5.0
   - Suporte a 3 idiomas (PT, EN, ES)
 
-- [ ] **2. FAQ - Perguntas Frequentes**
+- [xs] **2. FAQ - Perguntas Frequentes**
   - Dúvidas sobre agendamento
   - Formas de pagamento
   - Política de cancelamento

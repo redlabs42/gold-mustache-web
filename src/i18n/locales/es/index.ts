@@ -1,6 +1,7 @@
 import brand from "./brand.json";
 import common from "./common.json";
 import contact from "./contact.json";
+import faq from "./faq.json";
 import footer from "./footer.json";
 import hero from "./hero.json";
 import metadata from "./metadata.json";
@@ -12,6 +13,7 @@ export default {
   brand,
   common,
   contact,
+  faq,
   footer,
   hero,
   metadata,
