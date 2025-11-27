@@ -1,0 +1,18 @@
+{
+  "badge": "Galería",
+  "title": "Transformaciones Increíbles",
+  "description": "Vea el antes y después de nuestros trabajos. Calidad y excelencia en cada detalle.",
+  "before": "Antes",
+  "after": "Después",
+  "beforeAlt": "Antes del servicio",
+  "afterAlt": "Después del servicio",
+  "clickToView": "Haga clic para ampliar",
+  "noResults": "No se encontraron resultados para este filtro",
+  "categories": {
+    "all": "Todos",
+    "haircut": "Cortes",
+    "beard": "Barba",
+    "combo": "Combo",
+    "styling": "Finalización"
+  }
+}

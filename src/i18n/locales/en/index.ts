@@ -3,6 +3,7 @@ import common from "./common.json";
 import contact from "./contact.json";
 import faq from "./faq.json";
 import footer from "./footer.json";
+import gallery from "./gallery.json";
 import hero from "./hero.json";
 import metadata from "./metadata.json";
 import navigation from "./navigation.json";
@@ -15,6 +16,7 @@ export default {
   contact,
   faq,
   footer,
+  gallery,
   hero,
   metadata,
   navigation,

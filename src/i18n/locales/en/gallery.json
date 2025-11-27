@@ -1,0 +1,18 @@
+{
+  "badge": "Gallery",
+  "title": "Amazing Transformations",
+  "description": "See the before and after of our work. Quality and excellence in every detail.",
+  "before": "Before",
+  "after": "After",
+  "beforeAlt": "Before service",
+  "afterAlt": "After service",
+  "clickToView": "Click to enlarge",
+  "noResults": "No results found for this filter",
+  "categories": {
+    "all": "All",
+    "haircut": "Haircuts",
+    "beard": "Beard",
+    "combo": "Combo",
+    "styling": "Styling"
+  }
+}
