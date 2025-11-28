@@ -67,6 +67,14 @@ export function Header() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link
+                href="#equipe"
+                className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
+              >
+                {t("team")}
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link
                 href="#instagram"
                 className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
               >
@@ -173,6 +181,13 @@ export function Header() {
                     onClick={() => setIsOpen(false)}
                   >
                     {t("services")}
+                  </Link>
+                  <Link
+                    href="#equipe"
+                    className="text-lg font-medium hover:text-primary transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {t("team")}
                   </Link>
                   <Link
                     href="#instagram"

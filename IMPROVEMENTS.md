@@ -21,7 +21,7 @@
   - Serviços mais procurados
   - Estimativa: 1-2h
 
-- [ ] **3. Galeria de Trabalhos (Antes/Depois)**
+- [x] **3. Galeria de Trabalhos (Antes/Depois)**
   - Grid de fotos profissionais
   - Lightbox para visualização
   - Filtros por tipo de serviço
@@ -30,7 +30,7 @@
 
 ## 🟡 Média Prioridade (Credibilidade e Engajamento)
 
-- [ ] **4. Seção "Sobre Nós" / Equipe**
+- [x] **4. Seção "Sobre Nós" / Equipe** ✅ CONCLUÍDO
   - Apresentação dos barbeiros
   - Fotos profissionais
   - Especialidades de cada um
