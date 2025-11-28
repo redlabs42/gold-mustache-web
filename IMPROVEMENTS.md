@@ -44,12 +44,13 @@
   - Sitemap detalhado
   - Estimativa: 1-2h
 
-- [ ] **7. Otimização de Imagens**
-  - Converter para WebP
-  - Lazy loading
-  - Responsive images
-  - Compressão automática
-  - Estimativa: 1h
+- [x] **7. Otimização de Imagens** ✅ CONCLUÍDO
+  - Converter para WebP ✅
+  - Lazy loading ✅
+  - Responsive images ✅
+  - Compressão automática ✅
+  - Cache agressivo (1 ano) ✅
+  - 4.90MB economizados (24 imagens otimizadas)
 
 - [ ] **8. Pop-up de Boas-Vindas**
   - Primeira visita

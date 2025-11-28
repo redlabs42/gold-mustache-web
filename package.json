@@ -11,7 +11,8 @@
     "test": "vitest --run",
     "test:watch": "vitest",
     "prepare": "husky",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "optimize:images": "node scripts/optimize-images.js"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
