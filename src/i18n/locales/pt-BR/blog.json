@@ -1,0 +1,45 @@
+{
+  "title": "Blog",
+  "subtitle": "Dicas & Tendências",
+  "description": "Conteúdo exclusivo sobre cuidados masculinos, tendências de cortes e dicas dos nossos especialistas.",
+  "readMore": "Ler mais",
+  "readTime": "min de leitura",
+  "backToBlog": "Voltar ao Blog",
+  "cta": {
+    "title": "Gostou das dicas?",
+    "description": "Agende seu horário e venha nos visitar! Nossa equipe está pronta para cuidar do seu visual.",
+    "button": "Agendar Agora"
+  },
+  "keepReading": "Continue Lendo",
+  "featured": "Destaque",
+  "moreArticles": "Mais Artigos",
+  "categories": {
+    "all": "Todos",
+    "barba": "Barba",
+    "cortes": "Cortes",
+    "dicas": "Dicas",
+    "cuidados": "Cuidados"
+  },
+  "posts": {
+    "cuidados-barba": {
+      "title": "Guia Completo: Cuidados com a Barba",
+      "excerpt": "Descubra os segredos para manter sua barba sempre impecável com dicas dos nossos barbeiros especialistas.",
+      "content": "A barba bem cuidada é sinônimo de estilo e personalidade. Neste guia, vamos compartilhar os segredos que nossos barbeiros usam para manter barbas sempre impecáveis.\n\n## 1. Lavagem Correta\n\nLave sua barba 2-3 vezes por semana com um shampoo específico para barba. Produtos comuns de cabelo podem ressecar os fios e a pele.\n\n## 2. Hidratação é Fundamental\n\nUse óleo de barba diariamente. Ele hidrata os fios, reduz a coceira e dá um brilho saudável. Aplique após o banho, quando os poros estão abertos.\n\n## 3. Escovação Regular\n\nEscove sua barba diariamente com uma escova de cerdas naturais. Isso distribui os óleos naturais, remove células mortas e treina os fios a crescerem na direção certa.\n\n## 4. Aparar Regularmente\n\nMesmo se estiver deixando crescer, apare as pontas a cada 2-3 semanas para remover pontas duplas e manter um formato definido.\n\n## 5. Alimentação e Hidratação\n\nBeba bastante água e mantenha uma dieta rica em proteínas, biotina e vitaminas. Isso reflete diretamente na saúde dos fios.\n\n## Conclusão\n\nCuidar da barba é um ritual que vale a pena. Com consistência e os produtos certos, você terá uma barba que será sua marca registrada."
+    },
+    "tendencias-cortes-2025": {
+      "title": "Tendências de Cortes Masculinos para 2025",
+      "excerpt": "Conheça os cortes que estão dominando as barbearias e como escolher o ideal para você.",
+      "content": "O ano de 2025 traz uma mistura interessante de clássicos reinventados e novidades ousadas. Confira as principais tendências:\n\n## 1. Mullet Moderno\n\nO mullet voltou com força, mas em uma versão mais refinada. Mais curto nas laterais e com transições suaves, é perfeito para quem quer ousar sem exagerar.\n\n## 2. Buzz Cut Texturizado\n\nO corte raspado ganhou textura no topo. Ideal para quem busca praticidade sem abrir mão do estilo.\n\n## 3. Mid Fade com Franja\n\nA combinação de degradê médio com franja texturizada continua em alta. Versátil e fácil de estilizar.\n\n## 4. Corte Clássico Americano\n\nO side part tradicional nunca sai de moda. Em 2025, vem com acabamento mais natural e menos produto.\n\n## 5. Textured Crop\n\nCorte curto com muito movimento no topo. Perfeito para cabelos grossos e ondulados.\n\n## Como Escolher?\n\nConsidere seu tipo de cabelo, formato do rosto e estilo de vida. Na dúvida, converse com seu barbeiro - estamos aqui para ajudar!\n\n## Conclusão\n\nA tendência mais importante é a que combina com você. Venha nos visitar e vamos encontrar o corte perfeito juntos."
+    },
+    "corte-ideal-rosto": {
+      "title": "Como Escolher o Corte Ideal para Seu Formato de Rosto",
+      "excerpt": "Aprenda a identificar seu formato de rosto e descubra quais cortes valorizam suas características.",
+      "content": "Escolher o corte certo pode transformar completamente sua aparência. O segredo está em entender seu formato de rosto.\n\n## Identificando Seu Formato\n\n### Rosto Oval\nConsiderado o formato mais versátil. A testa é ligeiramente mais larga que o queixo, com maçãs do rosto proeminentes.\n**Cortes ideais:** Praticamente todos! Aproveite para experimentar.\n\n### Rosto Redondo\nComprimento e largura são similares, com bochechas cheias.\n**Cortes ideais:** Cortes com volume no topo e laterais mais curtas alongam o rosto. Evite cortes muito curtos em todo o redor.\n\n### Rosto Quadrado\nMandíbula forte e angular, testa larga.\n**Cortes ideais:** Cortes texturizados que suavizam os ângulos. Fades médios funcionam muito bem.\n\n### Rosto Retangular/Oblongo\nRosto mais longo que largo.\n**Cortes ideais:** Evite muito volume no topo. Laterais com mais comprimento equilibram as proporções.\n\n### Rosto Triangular\nQueixo mais largo que a testa.\n**Cortes ideais:** Volume no topo para equilibrar. Franjas e cortes mais cheios na parte superior.\n\n## Dica Extra\n\nAlém do formato, considere:\n- Textura do cabelo\n- Linha de crescimento\n- Estilo pessoal\n- Rotina de cuidados\n\n## Conclusão\n\nNão existe corte errado, existe corte que não combina. Agende um horário e vamos encontrar o seu juntos!"
+    },
+    "cuidados-pos-corte": {
+      "title": "Cuidados Essenciais Após o Corte",
+      "excerpt": "Saiba como manter seu corte impecável por mais tempo com estas dicas simples.",
+      "content": "Saiu da barbearia com o corte perfeito? Veja como mantê-lo assim por mais tempo:\n\n## Primeiras 24 Horas\n\n### Evite Lavar\nEspere pelo menos 24 horas antes de lavar o cabelo. Isso permite que os óleos naturais se restabeleçam.\n\n### Não Toque Demais\nResista à tentação de ficar passando a mão. Seus dedos transferem oleosidade.\n\n## Primeira Semana\n\n### Produtos Certos\nUse produtos leves nos primeiros dias. Pomadas e ceras pesadas podem sobrecarregar o cabelo recém-cortado.\n\n### Durma com Cuidado\nUse fronha de seda ou cetim para reduzir o atrito e manter o formato.\n\n## Manutenção Contínua\n\n### Lavagem\nLave o cabelo a cada 2-3 dias com shampoo adequado ao seu tipo de cabelo.\n\n### Condicionador\nUse condicionador apenas no comprimento, nunca na raiz.\n\n### Secagem\nSeque com toalha sem esfregar. Deixe secar naturalmente quando possível.\n\n## Quando Voltar?\n\nPara manter o corte sempre em dia:\n- Cortes curtos: 2-3 semanas\n- Cortes médios: 4-6 semanas\n- Cortes longos: 6-8 semanas\n\n## Conclusão\n\nPequenos cuidados fazem grande diferença. E quando precisar de um retoque, estaremos aqui esperando!"
+    }
+  }
+}

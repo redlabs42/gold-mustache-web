@@ -1,0 +1,45 @@
+{
+  "title": "Blog",
+  "subtitle": "Tips & Trends",
+  "description": "Exclusive content about men's grooming, haircut trends, and tips from our specialists.",
+  "readMore": "Read more",
+  "readTime": "min read",
+  "backToBlog": "Back to Blog",
+  "cta": {
+    "title": "Liked the tips?",
+    "description": "Book your appointment and come visit us! Our team is ready to take care of your look.",
+    "button": "Book Now"
+  },
+  "keepReading": "Keep Reading",
+  "featured": "Featured",
+  "moreArticles": "More Articles",
+  "categories": {
+    "all": "All",
+    "barba": "Beard",
+    "cortes": "Haircuts",
+    "dicas": "Tips",
+    "cuidados": "Care"
+  },
+  "posts": {
+    "cuidados-barba": {
+      "title": "Complete Guide: Beard Care",
+      "excerpt": "Discover the secrets to keeping your beard always impeccable with tips from our specialist barbers.",
+      "content": "A well-groomed beard is synonymous with style and personality. In this guide, we'll share the secrets our barbers use to keep beards always impeccable.\n\n## 1. Proper Washing\n\nWash your beard 2-3 times a week with a beard-specific shampoo. Regular hair products can dry out the hair and skin.\n\n## 2. Hydration is Key\n\nUse beard oil daily. It moisturizes the hair, reduces itching, and gives a healthy shine. Apply after showering when pores are open.\n\n## 3. Regular Brushing\n\nBrush your beard daily with a natural bristle brush. This distributes natural oils, removes dead cells, and trains the hair to grow in the right direction.\n\n## 4. Regular Trimming\n\nEven if you're growing it out, trim the ends every 2-3 weeks to remove split ends and maintain a defined shape.\n\n## 5. Diet and Hydration\n\nDrink plenty of water and maintain a diet rich in proteins, biotin, and vitamins. This directly reflects on hair health.\n\n## Conclusion\n\nBeard care is a ritual worth doing. With consistency and the right products, you'll have a beard that becomes your signature."
+    },
+    "tendencias-cortes-2025": {
+      "title": "Men's Haircut Trends for 2025",
+      "excerpt": "Discover the cuts dominating barbershops and how to choose the ideal one for you.",
+      "content": "2025 brings an interesting mix of reinvented classics and bold new styles. Check out the main trends:\n\n## 1. Modern Mullet\n\nThe mullet is back strong, but in a more refined version. Shorter on the sides with smooth transitions, perfect for those who want to be bold without overdoing it.\n\n## 2. Textured Buzz Cut\n\nThe shaved cut gained texture on top. Ideal for those seeking practicality without giving up style.\n\n## 3. Mid Fade with Fringe\n\nThe combination of medium fade with textured fringe remains popular. Versatile and easy to style.\n\n## 4. Classic American Cut\n\nThe traditional side part never goes out of style. In 2025, it comes with a more natural finish and less product.\n\n## 5. Textured Crop\n\nShort cut with lots of movement on top. Perfect for thick and wavy hair.\n\n## How to Choose?\n\nConsider your hair type, face shape, and lifestyle. When in doubt, talk to your barber - we're here to help!\n\n## Conclusion\n\nThe most important trend is the one that suits you. Come visit us and let's find the perfect cut together."
+    },
+    "corte-ideal-rosto": {
+      "title": "How to Choose the Ideal Cut for Your Face Shape",
+      "excerpt": "Learn to identify your face shape and discover which cuts enhance your features.",
+      "content": "Choosing the right cut can completely transform your appearance. The secret is understanding your face shape.\n\n## Identifying Your Shape\n\n### Oval Face\nConsidered the most versatile shape. The forehead is slightly wider than the chin, with prominent cheekbones.\n**Ideal cuts:** Almost all! Take advantage and experiment.\n\n### Round Face\nLength and width are similar, with full cheeks.\n**Ideal cuts:** Cuts with volume on top and shorter sides elongate the face. Avoid very short cuts all around.\n\n### Square Face\nStrong, angular jaw, wide forehead.\n**Ideal cuts:** Textured cuts that soften the angles. Medium fades work very well.\n\n### Rectangular/Oblong Face\nFace longer than wide.\n**Ideal cuts:** Avoid too much volume on top. Sides with more length balance the proportions.\n\n### Triangular Face\nChin wider than forehead.\n**Ideal cuts:** Volume on top to balance. Fringes and fuller cuts on top.\n\n## Extra Tip\n\nBesides shape, consider:\n- Hair texture\n- Growth line\n- Personal style\n- Care routine\n\n## Conclusion\n\nThere's no wrong cut, just cuts that don't match. Schedule an appointment and let's find yours together!"
+    },
+    "cuidados-pos-corte": {
+      "title": "Essential Post-Haircut Care",
+      "excerpt": "Learn how to keep your cut impeccable longer with these simple tips.",
+      "content": "Left the barbershop with the perfect cut? Here's how to keep it that way longer:\n\n## First 24 Hours\n\n### Avoid Washing\nWait at least 24 hours before washing your hair. This allows natural oils to reestablish.\n\n### Don't Touch Too Much\nResist the temptation to keep running your hands through it. Your fingers transfer oil.\n\n## First Week\n\n### Right Products\nUse light products in the first days. Heavy pomades and waxes can overload freshly cut hair.\n\n### Sleep Carefully\nUse a silk or satin pillowcase to reduce friction and maintain shape.\n\n## Ongoing Maintenance\n\n### Washing\nWash your hair every 2-3 days with shampoo suitable for your hair type.\n\n### Conditioner\nUse conditioner only on the length, never on the roots.\n\n### Drying\nDry with a towel without rubbing. Let it air dry when possible.\n\n## When to Return?\n\nTo keep your cut always fresh:\n- Short cuts: 2-3 weeks\n- Medium cuts: 4-6 weeks\n- Long cuts: 6-8 weeks\n\n## Conclusion\n\nSmall care makes a big difference. And when you need a touch-up, we'll be here waiting!"
+    }
+  }
+}

@@ -11,27 +11,48 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { BRAND } from "@/constants/brand";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
+
 import { Calendar, Instagram, Menu } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+
 import { useState } from "react";
+
+type NavLink = {
+  href: string;
+  label: string;
+};
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { isScrolledPastThreshold } = useScrollPosition(300);
   const t = useTranslations("navigation");
   const tCommon = useTranslations("common");
+  const locale = useLocale();
 
   const handleBookingClick = () => {
     window.open(BRAND.booking.inbarberUrl, "_blank", "noopener,noreferrer");
   };
 
+  // Helper to create proper links that work from any page
+  const homeLink = `/${locale}`;
+  const sectionLink = (section: string) => `/${locale}#${section}`;
+
+  const navLinks: NavLink[] = [
+    { href: homeLink, label: t("home") },
+    { href: sectionLink("servicos"), label: t("services") },
+    { href: sectionLink("equipe"), label: t("team") },
+    { href: `/${locale}/blog`, label: t("blog") },
+    { href: sectionLink("eventos"), label: t("events") },
+    { href: sectionLink("contato"), label: t("contact") },
+  ];
+
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4 m-auto">
         <Link
-          href="/"
+          href={homeLink}
           className="flex items-center space-x-3 text-xl font-bold text-primary hover:text-primary/90 transition-colors"
         >
           <div className="h-8 w-8 flex items-center justify-center">
@@ -47,86 +68,46 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <NavigationMenu className="hidden md:flex">
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <Link
-                href="/"
-                className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
-              >
-                {t("home")}
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link
-                href="#servicos"
-                className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
-              >
-                {t("services")}
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link
-                href="#equipe"
-                className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
-              >
-                {t("team")}
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link
-                href="#instagram"
-                className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
-              >
-                {t("instagram")}
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link
-                href="#eventos"
-                className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
-              >
-                {t("events")}
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link
-                href="#contato"
-                className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
-              >
-                {t("contact")}
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link
-                href="#parceiros"
-                className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
-              >
-                {t("sponsors")}
-              </Link>
-            </NavigationMenuItem>
+        <NavigationMenu className="hidden lg:flex">
+          <NavigationMenuList className="gap-0.5">
+            {navLinks.map((link) => (
+              <NavigationMenuItem key={link.href}>
+                <Link
+                  href={link.href}
+                  className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
+                >
+                  {link.label}
+                </Link>
+              </NavigationMenuItem>
+            ))}
           </NavigationMenuList>
         </NavigationMenu>
 
         {/* Desktop Actions */}
-        <div className="hidden md:flex items-center space-x-3">
+        <div className="hidden lg:flex items-center gap-1">
           <LanguageSwitcher variant="desktop" />
+          <div className="w-px h-4 bg-border mx-1" />
           <ThemeToggle />
-          <Button variant="outline" size="sm" asChild>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-muted-foreground hover:text-foreground"
+            asChild
+          >
             <Link
               href={BRAND.instagram.mainUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2"
+              aria-label="Instagram"
             >
               <Instagram className="h-4 w-4" />
-              <span>{t("instagram")}</span>
             </Link>
           </Button>
           {!isScrolledPastThreshold && (
             <Button
               onClick={handleBookingClick}
-              className="flex items-center space-x-2 transition-all duration-300"
+              size="sm"
+              className="ml-2 flex items-center gap-2 transition-all duration-300 shadow-sm hover:shadow-md"
             >
               <Calendar className="h-4 w-4" />
               <span>{tCommon("buttons.book")}</span>
@@ -135,11 +116,8 @@ export function Header() {
         </div>
 
         {/* Mobile Menu */}
-        <div className="md:hidden flex items-center space-x-2">
-          <div className="flex items-center justify-between">
-            <span className="sr-only">{tCommon("aria.toggleTheme")}</span>
-            <ThemeToggle />
-          </div>
+        <div className="lg:hidden flex items-center gap-2">
+          <ThemeToggle />
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="sm">
@@ -168,55 +146,16 @@ export function Header() {
 
                 {/* Mobile Navigation */}
                 <nav className="flex flex-col space-y-4">
-                  <Link
-                    href="/"
-                    className="text-lg font-medium hover:text-primary transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {t("home")}
-                  </Link>
-                  <Link
-                    href="#servicos"
-                    className="text-lg font-medium hover:text-primary transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {t("services")}
-                  </Link>
-                  <Link
-                    href="#equipe"
-                    className="text-lg font-medium hover:text-primary transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {t("team")}
-                  </Link>
-                  <Link
-                    href="#instagram"
-                    className="text-lg font-medium hover:text-primary transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {t("instagram")}
-                  </Link>
-                  <Link
-                    href="#eventos"
-                    className="text-lg font-medium hover:text-primary transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {t("events")}
-                  </Link>
-                  <Link
-                    href="#contato"
-                    className="text-lg font-medium hover:text-primary transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {t("contact")}
-                  </Link>
-                  <Link
-                    href="#parceiros"
-                    className="text-lg font-medium hover:text-primary transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {t("sponsors")}
-                  </Link>
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
                 </nav>
 
                 {/* Mobile Actions */}

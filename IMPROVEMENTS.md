@@ -61,12 +61,12 @@
 
 ## 🟢 Baixa Prioridade (Crescimento a Longo Prazo)
 
-- [ ] **9. Blog de Conteúdo**
-  - Dicas de cuidados masculinos
-  - Tendências de cortes
-  - Produtos recomendados
-  - SEO orgânico
-  - Estimativa: 4-6h
+- [x] **9. Blog de Conteúdo** ✅ CONCLUÍDO
+  - Dicas de cuidados masculinos ✅
+  - Tendências de cortes ✅
+  - 4 artigos iniciais com i18n (PT, EN, ES) ✅
+  - SEO orgânico (Schema markup Article/Blog) ✅
+  - Navegação integrada no header ✅
 
 - [ ] **10. Programa de Fidelidade**
   - Sistema de pontos
