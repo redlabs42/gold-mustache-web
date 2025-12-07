@@ -5,6 +5,7 @@ import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import { LoadingElevatorWrapper } from "@/components/ui/loading-elevator-wrapper";
 import { BRAND } from "@/constants/brand";
 import { locales } from "@/i18n/config";
+import { QueryProvider } from "@/providers/query-provider";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
@@ -170,14 +171,16 @@ export default async function LocaleLayout({
         <GoogleAnalytics trackingId={BRAND.analytics.googleAnalyticsId} />
         <LoadingElevatorWrapper />
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Layout>{children}</Layout>
-          </ThemeProvider>
+          <QueryProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="dark"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <Layout>{children}</Layout>
+            </ThemeProvider>
+          </QueryProvider>
         </NextIntlClientProvider>
       </body>
     </html>

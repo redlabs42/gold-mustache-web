@@ -12,11 +12,12 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { BRAND } from "@/constants/brand";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 
-import { Calendar, Instagram, Menu } from "lucide-react";
+import { Calendar, Instagram, LogIn, Menu, User } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
+import { useUser } from "@/hooks/useAuth";
 import { useState } from "react";
 
 type NavLink = {
@@ -30,6 +31,7 @@ export function Header() {
   const t = useTranslations("navigation");
   const tCommon = useTranslations("common");
   const locale = useLocale();
+  const { data: user } = useUser();
 
   const handleBookingClick = () => {
     window.open(BRAND.booking.inbarberUrl, "_blank", "noopener,noreferrer");
@@ -103,6 +105,23 @@ export function Header() {
               <Instagram className="h-4 w-4" />
             </Link>
           </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-muted-foreground hover:text-foreground"
+            asChild
+          >
+            <Link
+              href={user ? `/${locale}/dashboard` : `/${locale}/login`}
+              aria-label={user ? "Dashboard" : "Login"}
+            >
+              {user ? (
+                <User className="h-4 w-4" />
+              ) : (
+                <LogIn className="h-4 w-4" />
+              )}
+            </Link>
+          </Button>
           {!isScrolledPastThreshold && (
             <Button
               onClick={handleBookingClick}
@@ -160,6 +179,20 @@ export function Header() {
 
                 {/* Mobile Actions */}
                 <div className="flex flex-col space-y-3 pt-4 border-t">
+                  <Button variant="outline" asChild className="w-full">
+                    <Link
+                      href={user ? `/${locale}/dashboard` : `/${locale}/login`}
+                      className="flex items-center justify-center space-x-2"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {user ? (
+                        <User className="h-4 w-4" />
+                      ) : (
+                        <LogIn className="h-4 w-4" />
+                      )}
+                      <span>{user ? "Minha Conta" : "Entrar"}</span>
+                    </Link>
+                  </Button>
                   <Button variant="outline" asChild className="w-full">
                     <Link
                       href={BRAND.instagram.mainUrl}

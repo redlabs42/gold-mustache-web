@@ -46,3 +46,5 @@ CLAUDE.md
 
 # Instagram cache (opcional - pode commitar para ter fallback inicial)
 # /public/data/instagram-cache.json
+
+/src/generated/prisma

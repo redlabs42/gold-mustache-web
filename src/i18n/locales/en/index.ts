@@ -1,3 +1,4 @@
+import auth from "./auth.json";
 import blog from "./blog.json";
 import brand from "./brand.json";
 import common from "./common.json";
@@ -13,6 +14,7 @@ import team from "./team.json";
 import testimonials from "./testimonials.json";
 
 export default {
+  auth,
   blog,
   brand,
   common,
